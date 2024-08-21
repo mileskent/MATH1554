@@ -143,11 +143,14 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-matrix:Obsidian Matrix": false
     }
   },
-  "active": "de9015fa34653dec",
+  "active": "34c0ca0ae07ec514",
   "lastOpenFiles": [
+    "Pasted image 20240821100548.png",
+    "Pasted image 20240821095448.png",
     "augmented-matrix.png",
     "().md",
     "Master.md",
