@@ -71,22 +71,94 @@ For **reduced row echelon form**
 4. All leading entries, if any, are equal to 1.
 5. Leading entries are the only nonzero entry in their respective column.
 
+## Pivots and Free Variables
 **Pivot position** in a matrix A is a location in A that corresponds to a leading 1 in the REF of A
 **Pivot column** is the column of the pivot
 
 **Free variables** are the variables of the non-pivot columns
 Any choice of the free variables leads to a solution of the system
+^[If you have any free variables you do not have a unique solution]
 ![[Pasted image 20240821100548.png]]
 
-### Theorem
-> A linear system is *consistent* if and only if (exactly when) the last
+## Theorem for Consistency
+> A linear system is *consistent* iff the last
 > column of the augmented matrix does not have a pivot. This is
 > the same as saying that the RREF of the augmented matrix does
 > not have a row of the form $[0\ 0\ 0\ 0\ ...\ |\ 1]$ 
 > 
 > Moreover, if a linear system is consistent, then it has
-> 1. a unique solution if and only if there are no free variables.
-> 2. infinitely many solutions that are parameterized by free variables
+> **1. a unique solution iff there are no free variables.**
+> **2. infinitely many solutions that are parameterized by free variables**
 
 # Vector Equations
-...
+$\mathbb{R}$ is all real numbers
+$\mathbb{R}^n$ is $n$ dimensions of $\mathbb{R}$
+
+## Linear Combination
+Let $c_i \in \mathbb{R} \land \vec{v}_i \in \mathbb{R}^{>=1}$
+$c_1 \vec{v}_1 + ... c_n \vec{v}_n = \vec{B}$
+is a **linear combination** of the $v$ vectors, with weights of the $c$'s
+
+## Span
+* The set of all linear combinations of the $v$'s in called the **span** of the $v$'s
+* e.g. $$SPAN(\begin{bmatrix}
+1 \\
+0
+\end{bmatrix}, \begin{bmatrix}
+0 \\
+1
+\end{bmatrix}) = \mathbb{R}^2$$
+* any 2 vectors in $\mathbb{R}^2$ that are not scalar multiplies of each other span $\mathbb{R}^2$
+Q: Is $\vec{b} \in SPAN(\vec{a}_1, \vec{a}_2)$
+$$\vec{b} = \begin{bmatrix}
+7 \\
+4 \\
+3
+\end{bmatrix}, \vec{a}_1 = \begin{bmatrix}
+1 \\
+-2 \\
+-5
+\end{bmatrix}, \vec{a}_2 = \begin{bmatrix}
+2 \\
+5 \\
+6
+\end{bmatrix}$$
+Matrix below in form of system of equations where X and Y scale columns 0 and 1, and column 2 are coefficients on the right hand side of the equation. By reducing this matrix to RREF, we can systematically reveal the values of X and Y
+
+$$\begin{bmatrix}
+1 &  2&  7\\
+-2 & 5&  4\\
+-5 &  6&  3
+\end{bmatrix}
+
+\begin{bmatrix}
+1 &  2&  7\\
+0 & 9&  18\\
+-5 &  6&  3
+\end{bmatrix}
+
+\begin{bmatrix}
+1 &  2&  7\\
+0 & 1&  2\\
+-5 &  6&  3
+\end{bmatrix}
+
+\begin{bmatrix}
+1 &  2&  7\\
+0 & 1&  2\\
+0 &  16&  38
+\end{bmatrix}
+
+\begin{bmatrix}
+1 &  2&  7\\
+0 & 1&  2\\
+0 &  0&  0
+\end{bmatrix}
+
+\begin{bmatrix}
+1 &  0&  3\\
+0 & 1&  2\\
+0 &  0&  0
+\end{bmatrix}
+$$
+Yes.
