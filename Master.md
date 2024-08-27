@@ -93,6 +93,7 @@ Any choice of the free variables leads to a solution of the system
 # Vector Equations
 $\mathbb{R}$ is all real numbers
 $\mathbb{R}^n$ is $n$ dimensions of $\mathbb{R}$
+$\mathbb{R}^{n \times m}$ is $n$ rows and $m$ columns
 
 ## Linear Combination
 Let $c_i \in \mathbb{R} \land \vec{v}_i \in \mathbb{R}^{>=1}$
@@ -162,3 +163,30 @@ $$\begin{bmatrix}
 \end{bmatrix}
 $$
 Yes.
+
+$\vec{A} \vec{x} = \vec{b}$ exists
+
+
+
+![[Pasted image 20240826095038.png]]
+$$\begin{bmatrix}
+2 & 3 & 7 \\
+1 & -1 & 5
+\end{bmatrix}
+
+\begin{bmatrix}
+5 & 0 & 22 \\
+1 & -1 & 5
+\end{bmatrix}
+
+\begin{bmatrix}
+1 & 0 & 22/5 \\
+0 & 1 & 22/5-5
+\end{bmatrix}
+$$
+## Homogeneous vs Inhomogeneous
+
+## Parametric vector forms of solutions to linear systems
+
+
+
