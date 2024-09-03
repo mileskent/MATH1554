@@ -185,8 +185,63 @@ $$\begin{bmatrix}
 \end{bmatrix}
 $$
 ## Homogeneous vs Inhomogeneous
+Homogeneous:
+$\vec{A} \vec{x} = \vec{0}$
+Homogeneous systems always have a trivial $\vec{0}$ solution, so naturally we would like to know if there are nontrivial, perhaps infinite solutions, namely if there is a free variable and a column with no pivots
 
 ## Parametric vector forms of solutions to linear systems
+You can parameterize the free variables and then write the solution as a vector sum.
 
+The solution is $\vec{x}$ which is
+$x_1 = 2x_3, x_2 = -x_3, x_3=x_3$
+Let $x_3 = t$
+$$\vec{x} = \begin{bmatrix}
+2 \\
+-1 \\
+1
+\end{bmatrix} t$$
 
+## Nonhomogenous System
+Because right side of augmented is nonzero
+$$\begin{bmatrix}
+1 & 3 & 1 & 9 \\
+2 & -1 & -5 & 11 \\
+0 & 1 & -2 & 6
+\end{bmatrix} \rightarrow^{RREF} \begin{bmatrix}
+1 & 0 & -2 & 6 \\
+0 & 1 & 1 & 1 \\
+0 & 0 & 0 & 0
+\end{bmatrix}$$
+Let $x_3 = t$
+$$\vec{x} = \begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+2 \\
+-1 \\
+1
+\end{bmatrix} t
++ \begin{bmatrix}
+6 \\
+1 \\
+0
+\end{bmatrix}
+$$
 
+## Linear Independence
+Given $\vec{A} \vec{x} = \vec{0}$, if the only solution $\vec{x}$ is $\vec{0}$ $\implies$ Linearly Independent
+
+Note:
+$\vec{A} = [\vec{a_0}\ ... \vec{a_n}]\ \big{|}\ \vec{a_i} \in \mathbb{R}^n$
+$\land$
+$span([\vec{a_0}\ ... \vec{a_n}]) = \mathbb{R}^n \quad \quad$ ^[Same as having n rows of pivots]
+$\iff$ Linearly Independent
+## Dependence
+* Any of the vectors in the set are a linear combination of the others
+* If there is a free variable, so there are infinite solutions to the homogenous equation
+* If the columns of A are in $\mathbb{R}^n$, and there are $n$ basis vectors in $\mathbb{R}^n$ (which is always true), then if the amount of columns in A exceeds the amount of basis vectors that exist in that dimension, it means that there are free variables, which indicates linear dependence
+* If one or more of the columns of A is $\vec{0}$
+## Geometric interpretation of linearly independent vectors
