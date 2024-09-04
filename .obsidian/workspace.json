@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "b80babd72f3db4a0",
@@ -147,7 +148,7 @@
       "obsidian-matrix:Obsidian Matrix": false
     }
   },
-  "active": "de9015fa34653dec",
+  "active": "437451c99647f9d6",
   "lastOpenFiles": [
     "Master.md",
     "Pasted image 20240826095038.png",
