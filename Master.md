@@ -1,4 +1,5 @@
 [Barone Website](https://sbarone7.math.gatech.edu/ma1554s24.html)
+r
 [Master Website](https://gatech.instructure.com/courses/114544)
 
 course id: *barone36886*
@@ -361,4 +362,83 @@ Theorem
 > $A = [T(\vec{e_1}), T(\vec{e_2}), ... T(\vec{e_n})]$
 
 ## Two and three dimensional transformations in more detail.
+$$T(\vec{e_1}) = \begin{bmatrix}
+5 \\
+ -7\\
+2
+\end{bmatrix}, T(\vec{e_2})=\begin{bmatrix}
+-3 \\
+ -8\\
+0
+\end{bmatrix}$$
+$$A = \begin{bmatrix}
+T(\vec{e_1}) & T(\vec{e_2}) 
+\end{bmatrix} = \begin{bmatrix}
+5 & -3 \\
+-7 &  -8\\
+2 & 0
+\end{bmatrix}$$
+
+Find standard matrix A for T(x) = 3$\vec{x}$ for x in $\mathbb{R}^2$
+$A \in \mathbb{R}^2$
+
+$$A = \begin{bmatrix}
+T(\vec{e_1}) & T(\vec{e_2}) 
+\end{bmatrix} = \begin{bmatrix}
+\begin{bmatrix}
+3 \\
+0
+\end{bmatrix} & \begin{bmatrix}
+0 \\
+3
+\end{bmatrix}
+\end{bmatrix} = \begin{bmatrix}
+3 & 0 \\
+0 & 3
+\end{bmatrix}$$
+
 ## Onto and one-to-one transformations
+## Onto
+A linear transformation $T: \mathbb{R}^n \rightarrow \mathbb{R}^m$ is onto if there exists a location in the codomain for every location in the domain
+onto iff the standard matrix has a pivot in every row
+
+
+The matrix A has columns which span $\mathbb{R}^m$.
+The matrix A has m pivotal columns.
+
+## 1-1
+* If there is at most one location in the codomain for every location in the domain
+* 1-1 iff standard matrix has pivot in every column
+
+### Example(s)
+* e.g. $F(x) = x^2$ is not 1-1, because multiple x values for a single y value
+
+
+The unique solution to $T (\vec{x}) = \vec{0}$ is the trivial one.
+The matrix A ***linearly independent*** columns.
+Each column of A is pivotal.
+
+## 1-1 and Onto
+need square matrix
+...
+...
+
+# Identity and zero matrices
+0 Matrix is matrix full of zeroes
+Identity matrix is a square matrix full of zeroes except for the diagonal, which is all ones. Multiplying with identity matrix always yields the same matrix.
+# Matrix algebra (sums and products, scalar multiplies, matrix powers)
+Sums: same dimensions
+Matrix multiplication: $r_1 * (c_1 \times r_2) * c_2 \rightarrow r_1 \times c_2$, $AB \neq BA$, $AB = AC \not \implies B = C$, $AB = 0 \not \implies A = 0 \lor B = 0$, $AB = [Ab_1\ Ab_2]$
+# Transpose of a matrix
+$$ A=\begin{bmatrix}
+a & b \\
+c & d \\
+e & f
+\end{bmatrix}, A^T = \begin{bmatrix}
+a & b & c \\
+d & e & f
+\end{bmatrix}$$
+$(A^T)^T = A$
+$(A + B)^T + A^T + B^T$
+$(sA)^T = s(A^T)$
+$(AB)^T = B^T A^T$
