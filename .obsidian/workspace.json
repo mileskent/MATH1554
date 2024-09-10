@@ -138,13 +138,13 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-matrix:Obsidian Matrix": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "obsidian-matrix:Obsidian Matrix": false
+      "command-palette:Open command palette": false
     }
   },
   "active": "437451c99647f9d6",

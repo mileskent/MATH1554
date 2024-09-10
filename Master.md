@@ -1,5 +1,4 @@
 [Barone Website](https://sbarone7.math.gatech.edu/ma1554s24.html)
-r
 [Master Website](https://gatech.instructure.com/courses/114544)
 
 course id: *barone36886*
@@ -398,6 +397,11 @@ T(\vec{e_1}) & T(\vec{e_2})
 \end{bmatrix}$$
 
 ## Onto and one-to-one transformations
+TLDR: 
+1-1 $\iff$ every column of T is a pivot column
+Onto $\iff$ every row of T is a pivot row
+
+
 ## Onto
 A linear transformation $T: \mathbb{R}^n \rightarrow \mathbb{R}^m$ is onto if there exists a location in the codomain for every location in the domain
 onto iff the standard matrix has a pivot in every row
