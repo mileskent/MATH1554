@@ -235,7 +235,7 @@ $$
 ## Linear Independence
 Given $\vec{A} \vec{x} = \vec{0}$, if the only solution $\vec{x}$ is $\vec{0}$ $\implies$ Linearly Independent
 
-Note:
+Note: (This might just be wrong)
 $\vec{A} = [\vec{a_0}\ ... \vec{a_n}]\ \big{|}\ \vec{a_i} \in \mathbb{R}^n$
 $\land$
 $span([\vec{a_0}\ ... \vec{a_n}]) = \mathbb{R}^n \quad \quad$ ^[Same as having n rows of pivots]
@@ -420,8 +420,8 @@ Each column of A is pivotal.
 
 ## 1-1 and Onto
 need square matrix
-...
-...
+if 1-1 then onto
+if Onto then 1-1
 
 # Identity and zero matrices
 0 Matrix is matrix full of zeroes
@@ -442,3 +442,41 @@ $(A^T)^T = A$
 $(A + B)^T + A^T + B^T$
 $(sA)^T = s(A^T)$
 $(AB)^T = B^T A^T$
+
+## Invertibility
+A property of only square matrices, because Matrix A is invertible if and only if it is row equivalent to the identity.
+$A \in \mathbb{R}^{n \times n}$ is invertible if $\exists C \in \mathbb{R}^{n \times n} s.t. AC = CA = I_n$
+
+$A \in \mathbb{R}^{n \times n}$ is invertible $\iff \forall \vec{b} \in \mathbb{R}^n\ \exists !\ \vec{x}\ s.t.\ A \vec{x} = \vec{b}$
+
+## $2 \times 2$ Inverse Shortcut
+$$A = \begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}
+$$
+$$\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}^{-1} = \frac{1}{det(A)}
+\begin{bmatrix}
+d & -b \\
+-c & a
+\end{bmatrix}
+$$
+## Inverse Properties
+$(A^{-1})^{-1} = A$
+$(AB)^{-1} = B^{-1} A^{-1}$
+$(A^T)^{-1} = (A^{-1})^T$
+
+## Elementary Matrix
+An elementary matrix, E, is one that differs by $I_n$ by one row operation.
+## General way to compute inverse
+Row reduce $(A | I_n)$ until you get $I_n$ for A
+
+Therefore, if
+$(E^n E^{n-1} ... E_1) A = I_n$
+then
+$(E^n E^{n-1} ... E_1) = A^{-1}$
+
+
