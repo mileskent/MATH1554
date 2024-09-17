@@ -480,3 +480,31 @@ then
 $(E^n E^{n-1} ... E_1) = A^{-1}$
 
 
+## Invertible Matrix Properties
+Let A be an n x n matrix. These statements are all equivalent
+> a) A is invertible.
+> b) A is row equivalent to I^n.
+> c) A has n pivotal columns. (All columns are pivotal.)
+> d) Ax = 0 has only the trivial solution.
+> e) The columns of A are linearly independent.
+> f) The linear transformation x -> Ax is one-to-one.
+> g) The equation Ax = b has a solution for all b in R^n.
+> h) The columns of A span R^n.
+> i) The linear transformation x -> Ax is onto.
+> j) There is a n x n matrix C so that CA = I_n. (A has a left inverse.)
+> k) There is a n x n matrix D so that AD = I_n. (A has a right inverse.)
+> l) A^T is invertible.
+
+## Abbreviated, invertible matrix theorem (IMT)
+$AB = I \implies A = B^{-1}, B = A^{-1},$ B is invertible, A is invertible
+
+## Singular
+Noninvertible
+
+## Partitioned/Block Matrix
+A partitioned matrix is a matrix that you write as a matrix of matrices
+
+## Row Column Method
+Let A be m x n and B be n x p matrix. Then, the (i, j) entry of AB is 
+row_i A · col_j B.
+This is the Row Column Method for matrix multiplication
