@@ -508,3 +508,5 @@ A partitioned matrix is a matrix that you write as a matrix of matrices
 Let A be m x n and B be n x p matrix. Then, the (i, j) entry of AB is 
 row_i A · col_j B.
 This is the Row Column Method for matrix multiplication
+
+![[Pasted image 20240917100516.png]]
