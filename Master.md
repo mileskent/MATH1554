@@ -510,3 +510,22 @@ row_i A · col_j B.
 This is the Row Column Method for matrix multiplication
 
 ![[Pasted image 20240917100516.png]]
+
+# LU Factorization
+## Triangular Matrices
+Upper Triangular: Nonzero along and above
+Lower Triangular: Nonzero along and below 
+
+If A is an m x n matrix that can be row reduced to echelon form
+without row exchanges, then A = LU . L is a lower triangular m x m
+matrix with 1’s on the diagonal, U is an echelon form of A.
+
+Suppose A can be row reduced to echelon form U without interchanging
+rows. Then,
+$E_p ... E_0 A = U$
+$A = LU = (E_p ... E_0)^{-1}$
+To compute the LU decomposition:
+1. Reduce A to an echelon form U by a sequence of row replacement
+operations, if possible.
+2. Place entries in L such that the same sequence of row operations
+reduces L to I.
