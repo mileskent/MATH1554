@@ -503,6 +503,7 @@ Noninvertible
 
 ## Partitioned/Block Matrix
 A partitioned matrix is a matrix that you write as a matrix of matrices
+When doing multiplication with a block matrix, make sure the "receiving" matrix's entries go first, to respect the lack of commutativity in matrix multiplication. See HW 2.4 if this doesn't make sense.
 
 ## Row Column Method
 Let A be m x n and B be n x p matrix. Then, the (i, j) entry of AB is 
