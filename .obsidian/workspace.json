@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "91e9e78483c4bab8",
+        "id": "1441d883841a26cf",
         "type": "tabs",
         "children": [
           {
-            "id": "437451c99647f9d6",
+            "id": "58a2dafeae6d500b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -147,10 +147,11 @@
       "obsidian-matrix:Obsidian Matrix": false
     }
   },
-  "active": "437451c99647f9d6",
+  "active": "58a2dafeae6d500b",
   "lastOpenFiles": [
-    "Pasted image 20240917100516.png",
+    "Pasted image 20240923104520.png",
     "Master.md",
+    "Pasted image 20240917100516.png",
     "Pasted image 20240826095038.png",
     "Pasted image 20240821100548.png",
     "Pasted image 20240821095448.png",

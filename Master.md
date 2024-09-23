@@ -1,5 +1,4 @@
 [Barone Website](https://sbarone7.math.gatech.edu/ma1554s24.html)
-r
 [Master Website](https://gatech.instructure.com/courses/114544)
 
 course id: *barone36886*
@@ -530,3 +529,73 @@ To compute the LU decomposition:
 operations, if possible.
 2. Place entries in L such that the same sequence of row operations
 reduces L to I.
+
+## Subspaces of $\mathbb{R}^n$
+Subset
+A subset of $\mathbb{R}^n$, for example, is any collection of vectors that are in $\mathbb{R}^n$
+
+Subspace
+A subset H of $\mathbb{R}^n$ is a subspace if it is closed within scalar multiplication and vector addition, i.e. 
+$c \in \mathbb{R}; \vec{u}, \vec{v} \in H$
+$c \vec{u} \in H$, $\vec{u} + \vec{v} \in H$
+
+when c = 0 then $\vec{0} \in H$
+
+Columnspace
+span of columns of A
+same as range of A
+
+Nullspace
+span of set of $\vec{x}$ that satisfy $A\vec{x} = \vec{0}$
+Null $A = \{\vec{x} | A\vec{x} = \vec{0}\}$
+
+Basis
+Linearly independent vectors that span a subspace
+
+# Coordinates, relative to a basis
+There are many different possible choice of basis for a subspace. Our choice can give us dramatically different properties.
+
+Standard basis are i, j, k, but you can use other vectors to span the same amount of space if you want.
+
+Qs: 
+1. What is a determinant? Given a linear transformation T, let us focus on the magnitude of the cross product of the basis vectors. The determinant would be the scalar factor between the original and transformed areas?
+2. If you are calculating some integral over a transformed space, is the jacobian just the determinant of the transformation, or is it related---possibly scaling the result to make sense given standard basis vectors?
+
+## Dimension
+Dimension/Cardinality of a non-zero subspace H, dim H, is the number of vectors in the basis of H. We define dim{0} = 0.
+
+Theorem
+*Any two choices of $\mathcal{B}_1$, $\mathcal{B}_2$ of a non-zero subspace H have the same dimension*
+1. dim $\mathbb{R}^n$
+	1. n
+2. H = $\{(x_1 ...., x_n) : x_1 + ... + x_n = 0\}$ has dimension
+	1. n - 1
+	2. use the idea of # 3
+	3. n variables, solve for $x_1$ ito everything else. -> one pivot everything else free vars. Therefore n - 1 free vars
+3. dim(Null A) is the number of 
+	1. # of free vars
+4. dim(Col A) is the number of 
+	1. # of pivots
+
+## Rank
+the rank of a matrix A is the dimension of its column space
+
+![[Pasted image 20240923104520.png|400]]
+## Nullity
+dim(Null A) = Nullity
+
+## Rank Theorem $\star$
+If a mtrix A has n columns, then Rank A + dim Nul A = n
+
+## Basis Theorem
+Any two bases for a subspace have the same dimension
+
+## Invertibility Theorem
+Let A be a n x n matrix. These conditions are equivalent.
+1. A is invertible
+2. The columns of A are a basis for $\mathbb{R}^n$
+3. Col A = $\mathbb{R}^n$
+4. rank A = dim Col A = n
+5. Null A = {0}
+
+
