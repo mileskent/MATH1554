@@ -599,3 +599,26 @@ Let A be a n x n matrix. These conditions are equivalent.
 5. Null A = {0}
 
 
+# Determinant
+Imagine the area of parallelogram created by the basis of a standard vector space, like $\mathbb{R}^2$. Now apply a linear transformation $A$ to that vector space. The new area of the new parallelogram has been scaled by a factor of the determinant.
+
+If det = 0 A isn't invertible
+
+det Triangular = product of diagonals
+
+if A square:
+* if adding rows to rows on A to get B then det A = det B
+* if swapping rows in A to get B then det A = -det B
+* if scaling one row of A by k, then det B = k det A
+
+## Cofactor expansion
+What the diagonal 3x3 is shorthand for
+Cofactor of an n x n matrix A is $C_{ij} = (-1)^{i+j} det A_{ij}$
+$$\begin{bmatrix}
++ & - & + & ... \\
+- & + & - & ... \\
++ & - & + & ... \\
+... & ... & ... & ...
+\end{bmatrix}$$
+det A = $a_{1j}C_{1j} + ... + a_{nj} C_{nj}$
+For +/- use pattern of current matrix in Q, not the og
