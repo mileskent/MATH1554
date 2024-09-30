@@ -601,6 +601,10 @@ Let A be a n x n matrix. These conditions are equivalent.
 
 # Determinant
 Imagine the area of parallelogram created by the basis of a standard vector space, like $\mathbb{R}^2$. Now apply a linear transformation $A$ to that vector space. The new area of the new parallelogram has been scaled by a factor of the determinant.
+$S$ is the parallelopiped. $$volume(T(S)) = |det(A)| \cdot volume(S)$$
+You can also just think of it as the area of the parallelogram spanned by the columns of a matrix
+R^3 and beyond -> parallelopiped and volume
+(assume n by n matrix because we only know how to find determinants for square matrices)
 
 If det = 0 A isn't invertible
 
@@ -622,3 +626,9 @@ $$\begin{bmatrix}
 \end{bmatrix}$$
 det A = $a_{1j}C_{1j} + ... + a_{nj} C_{nj}$
 For +/- use pattern of current matrix in Q, not the og
+
+det A = det A^T .
+A is invertible if and only if det A 6 = 0.
+det(AB) = det A · det B
+det(A^-1) = 1/det(A)
+
