@@ -446,3 +446,61 @@ $(A^T)^T = A$
 $(A + B)^T + A^T + B^T$
 $(sA)^T = s(A^T)$
 $(AB)^T = B^T A^T$
+
+# Markov chains
+Matrix that uses the rates/probabilities: stochastic matrix
+![[Pasted image 20241002094128.png]]
+Columns are probability vectors.
+Sum to 1
+#### Probability Vector
+Some vector $\vec{x}$ with nonnegative elements that sum to 1
+#### Stochastic Matrix
+A stochastic matrix is a square matrix, P , whose columns are
+probability vectors.
+|det (P)| <= 1, only volume contracting or preserving
+#### Markov Chain
+A Markov chain is a sequence of probability vectors ~x k , and a
+stochastic matrix P , such that:
+ $$P^k \vec{x_0} = \vec{x}_k$$$$\vec{x}_{k+1} = P \vec{x}_k ; k = 0, 1, 2, . . .$$
+#### Steady-State Vector
+A steady-state vector for P is a vector $\vec{q}$ such that $P \vec{q} = \vec{q}$.
+$(P-I)\vec{q} = 0$
+Fixed point, I/O the same
+
+Ex:
+Determine the steady state vector for $$P = \begin{bmatrix}
+.8 & .3 \\
+.2 & .7
+\end{bmatrix}$$
+Goal: solve $P\vec{q} = \vec{q}$
+$(P-I)\vec{q} = \vec{q}$
+$$\begin{bmatrix}
+.8-1 & .3 & 0 \\
+.2 & .7-1 & 0
+\end{bmatrix}$$
+$$\begin{bmatrix}
+-.2 & .3 & 0 \\
+.2 & -.3 & 0
+\end{bmatrix}$$ ~
+$$\begin{bmatrix}
+1 & -\frac{3}{2} & 0 \\
+0 & 0 & 0
+\end{bmatrix}$$
+$$\therefore \vec{q} = t\begin{bmatrix}
+\frac{3}{2} \\
+1
+\end{bmatrix}$$
+$$\frac{3}{2}t + t = 1$$
+$$\therefore t = \begin{bmatrix}
+\frac{3}{5} \\
+\frac{2}{5}
+\end{bmatrix}$$
+# Convergence
+#### Regularity
+Stochastic matrix is regular if $P^k$ strictly has positive entries
+
+Theorem
+> as k -> $\infty$
+> $$\vec{x}_{k+1} = P \vec{x}_k ; k = 0, 1, 2, . . .$$
+> 
+> If $P$ is a regular stochastic matrix, then $P$ has a unique steady-state vector $\vec{q}$, and $\vec{x_{k+1}} = P\vec{x_k}$ converges to $\vec{q}$ as $k \rightarrow \infty$; $(P^k \vec{x_0} \longrightarrow_{k\rightarrow \infty} \vec{q})$ where $P\vec{q} = \vec{q}$
