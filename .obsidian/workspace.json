@@ -8,11 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b43f7fdac4454483",
+            "id": "44c06845a5951c6c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Master.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Master.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Master.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Master.md"
+              }
             }
           }
         ]
@@ -139,15 +147,16 @@
       "obsidian-matrix:Obsidian Matrix": false
     }
   },
-  "active": "b43f7fdac4454483",
+  "active": "44c06845a5951c6c",
   "lastOpenFiles": [
+    "Images/Pasted image 20240821095448.png",
     "Master.md",
-    "Pasted image 20240923104520.png",
-    "Pasted image 20240917100516.png",
-    "Pasted image 20240826095038.png",
-    "Pasted image 20240821100548.png",
-    "Pasted image 20240821095448.png",
-    "augmented-matrix.png",
+    "Images/augmented-matrix.png",
+    "Images",
+    "Images/Pasted image 20240923104520.png",
+    "Images/Pasted image 20240917100516.png",
+    "Images/Pasted image 20240826095038.png",
+    "Images/Pasted image 20240821100548.png",
     "().md",
     "Welcome.md"
   ]
