@@ -631,4 +631,3 @@ det A = det A^T .
 A is invertible if and only if det A 6 = 0.
 det(AB) = det A · det B
 det(A^-1) = 1/det(A)
-
