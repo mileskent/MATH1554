@@ -66,7 +66,7 @@ A rectangular matrix is in **echelon form** if
 1. If there are any, all zero rows are at the bottom
 2. The first non-zero entry (leading entry) of a row is to the right of any leading entries in the row above it
 3. All elements below a leading entry are zero
-![[Pasted image 20240821095448.png]]
+![[Pasted image 20240821095448.png|450]] 
 For **reduced row echelon form**
 4. All leading entries, if any, are equal to 1.
 5. Leading entries are the only nonzero entry in their respective column.
@@ -234,7 +234,7 @@ $$
 ## Linear Independence
 Given $\vec{A} \vec{x} = \vec{0}$, if the only solution $\vec{x}$ is $\vec{0}$ $\implies$ Linearly Independent
 
-Note:
+Note: (This might just be wrong)
 $\vec{A} = [\vec{a_0}\ ... \vec{a_n}]\ \big{|}\ \vec{a_i} \in \mathbb{R}^n$
 $\land$
 $span([\vec{a_0}\ ... \vec{a_n}]) = \mathbb{R}^n \quad \quad$ ^[Same as having n rows of pivots]
@@ -424,8 +424,8 @@ Each column of A is pivotal.
 
 ## 1-1 and Onto
 need square matrix
-...
-...
+if 1-1 then onto
+if Onto then 1-1
 
 # Identity and zero matrices
 0 Matrix is matrix full of zeroes
@@ -446,6 +446,196 @@ $(A^T)^T = A$
 $(A + B)^T + A^T + B^T$
 $(sA)^T = s(A^T)$
 $(AB)^T = B^T A^T$
+
+## Invertibility
+A property of only square matrices, because Matrix A is invertible if and only if it is row equivalent to the identity.
+$A \in \mathbb{R}^{n \times n}$ is invertible if $\exists C \in \mathbb{R}^{n \times n} s.t. AC = CA = I_n$
+
+$A \in \mathbb{R}^{n \times n}$ is invertible $\iff \forall \vec{b} \in \mathbb{R}^n\ \exists !\ \vec{x}\ s.t.\ A \vec{x} = \vec{b}$
+
+## $2 \times 2$ Inverse Shortcut
+$$A = \begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}
+$$
+$$\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}^{-1} = \frac{1}{det(A)}
+\begin{bmatrix}
+d & -b \\
+-c & a
+\end{bmatrix}
+$$
+## Inverse Properties
+$(A^{-1})^{-1} = A$
+$(AB)^{-1} = B^{-1} A^{-1}$
+$(A^T)^{-1} = (A^{-1})^T$
+
+## Elementary Matrix
+An elementary matrix, E, is one that differs by $I_n$ by one row operation.
+## General way to compute inverse
+Row reduce $(A | I_n)$ until you get $I_n$ for A
+
+Therefore, if
+$(E^n E^{n-1} ... E_1) A = I_n$
+then
+$(E^n E^{n-1} ... E_1) = A^{-1}$
+
+
+## Invertible Matrix Properties
+Let A be an n x n matrix. These statements are all equivalent
+> a) A is invertible.
+> b) A is row equivalent to I^n.
+> c) A has n pivotal columns. (All columns are pivotal.)
+> d) Ax = 0 has only the trivial solution.
+> e) The columns of A are linearly independent.
+> f) The linear transformation x -> Ax is one-to-one.
+> g) The equation Ax = b has a solution for all b in R^n.
+> h) The columns of A span R^n.
+> i) The linear transformation x -> Ax is onto.
+> j) There is a n x n matrix C so that CA = I_n. (A has a left inverse.)
+> k) There is a n x n matrix D so that AD = I_n. (A has a right inverse.)
+> l) A^T is invertible.
+
+## Abbreviated, invertible matrix theorem (IMT)
+$AB = I \implies A = B^{-1}, B = A^{-1},$ B is invertible, A is invertible
+
+## Singular
+Noninvertible
+
+## Partitioned/Block Matrix
+A partitioned matrix is a matrix that you write as a matrix of matrices
+When doing multiplication with a block matrix, make sure the "receiving" matrix's entries go first, to respect the lack of commutativity in matrix multiplication. See HW 2.4 if this doesn't make sense.
+
+## Row Column Method
+Let A be m x n and B be n x p matrix. Then, the (i, j) entry of AB is 
+row_i A · col_j B.
+This is the Row Column Method for matrix multiplication
+
+![[Pasted image 20240917100516.png]]
+
+# LU Factorization
+## Triangular Matrices
+Upper Triangular: Nonzero along and above
+Lower Triangular: Nonzero along and below 
+
+If A is an m x n matrix that can be row reduced to echelon form
+without row exchanges, then A = LU . L is a lower triangular m x m
+matrix with 1’s on the diagonal, U is an echelon form of A.
+
+Suppose A can be row reduced to echelon form U without interchanging
+rows. Then,
+$E_p ... E_0 A = U$
+$A = LU = (E_p ... E_0)^{-1}$
+To compute the LU decomposition:
+1. Reduce A to an echelon form U by a sequence of row replacement
+operations, if possible.
+2. Place entries in L such that the same sequence of row operations
+reduces L to I.
+
+## Subspaces of $\mathbb{R}^n$
+Subset
+A subset of $\mathbb{R}^n$, for example, is any collection of vectors that are in $\mathbb{R}^n$
+
+Subspace
+A subset H of $\mathbb{R}^n$ is a subspace if it is closed within scalar multiplication and vector addition, i.e. 
+$c \in \mathbb{R}; \vec{u}, \vec{v} \in H$
+$c \vec{u} \in H$, $\vec{u} + \vec{v} \in H$
+
+when c = 0 then $\vec{0} \in H$
+
+Columnspace
+span of columns of A
+same as range of A
+
+Nullspace
+span of set of $\vec{x}$ that satisfy $A\vec{x} = \vec{0}$
+Null $A = \{\vec{x} | A\vec{x} = \vec{0}\}$
+
+Basis
+Linearly independent vectors that span a subspace
+
+# Coordinates, relative to a basis
+There are many different possible choice of basis for a subspace. Our choice can give us dramatically different properties.
+
+Standard basis are i, j, k, but you can use other vectors to span the same amount of space if you want.
+
+Qs: 
+1. What is a determinant? Given a linear transformation T, let us focus on the magnitude of the cross product of the basis vectors. The determinant would be the scalar factor between the original and transformed areas?
+2. If you are calculating some integral over a transformed space, is the jacobian just the determinant of the transformation, or is it related---possibly scaling the result to make sense given standard basis vectors?
+
+## Dimension
+Dimension/Cardinality of a non-zero subspace H, dim H, is the number of vectors in the basis of H. We define dim{0} = 0.
+
+Theorem
+*Any two choices of $\mathcal{B}_1$, $\mathcal{B}_2$ of a non-zero subspace H have the same dimension*
+1. dim $\mathbb{R}^n$
+	1. n
+2. H = $\{(x_1 ...., x_n) : x_1 + ... + x_n = 0\}$ has dimension
+	1. n - 1
+	2. use the idea of # 3
+	3. n variables, solve for $x_1$ ito everything else. -> one pivot everything else free vars. Therefore n - 1 free vars
+3. dim(Null A) is the number of 
+	1. # of free vars
+4. dim(Col A) is the number of 
+	1. # of pivots
+
+## Rank
+the rank of a matrix A is the dimension of its column space
+
+![[Pasted image 20240923104520.png|400]]
+## Nullity
+dim(Null A) = Nullity
+
+## Rank Theorem $\star$
+If a mtrix A has n columns, then Rank A + dim Nul A = n
+
+## Basis Theorem
+Any two bases for a subspace have the same dimension
+
+## Invertibility Theorem
+Let A be a n x n matrix. These conditions are equivalent.
+1. A is invertible
+2. The columns of A are a basis for $\mathbb{R}^n$
+3. Col A = $\mathbb{R}^n$
+4. rank A = dim Col A = n
+5. Null A = {0}
+
+
+# Determinant
+Imagine the area of parallelogram created by the basis of a standard vector space, like $\mathbb{R}^2$. Now apply a linear transformation $A$ to that vector space. The new area of the new parallelogram has been scaled by a factor of the determinant.
+$S$ is the parallelopiped. $$volume(T(S)) = |det(A)| \cdot volume(S)$$
+You can also just think of it as the area of the parallelogram spanned by the columns of a matrix
+R^3 and beyond -> parallelopiped and volume
+(assume n by n matrix because we only know how to find determinants for square matrices)
+
+If det = 0 A isn't invertible
+
+det Triangular = product of diagonals
+
+if A square:
+* if adding rows to rows on A to get B then det A = det B
+* if swapping rows in A to get B then det A = -det B
+* if scaling one row of A by k, then det B = k det A
+
+## Cofactor expansion
+What the diagonal 3x3 is shorthand for
+Cofactor of an n x n matrix A is $C_{ij} = (-1)^{i+j} det A_{ij}$
+$$\begin{bmatrix}
++ & - & + & ... \\
+- & + & - & ... \\
++ & - & + & ... \\
+... & ... & ... & ...
+\end{bmatrix}$$
+det A = $a_{1j}C_{1j} + ... + a_{nj} C_{nj}$
+For +/- use pattern of current matrix in Q, not the og
+
+det A = det A^T .
+A is invertible if and only if det A 6 = 0.
+det(AB) = det A · det B
+det(A^-1) = 1/det(A)
 
 # Markov chains
 Matrix that uses the rates/probabilities: stochastic matrix
