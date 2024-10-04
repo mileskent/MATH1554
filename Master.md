@@ -453,6 +453,8 @@ $A \in \mathbb{R}^{n \times n}$ is invertible if $\exists C \in \mathbb{R}^{n \t
 
 $A \in \mathbb{R}^{n \times n}$ is invertible $\iff \forall \vec{b} \in \mathbb{R}^n\ \exists !\ \vec{x}\ s.t.\ A \vec{x} = \vec{b}$
 
+$det(A) \not = 0 \iff $ invertible  
+
 ## $2 \times 2$ Inverse Shortcut
 $$A = \begin{bmatrix}
 a & b \\
