@@ -613,7 +613,7 @@ You can also just think of it as the area of the parallelogram spanned by the co
 R^3 and beyond -> parallelopiped and volume
 (assume n by n matrix because we only know how to find determinants for square matrices)
 
-If det = 0 A isn't invertible
+If det = 0 A is noninvertible
 
 det Triangular = product of diagonals
 
@@ -714,6 +714,8 @@ $A\vec{v} - \lambda \vec{v}= 0$
 $A\vec{v}-\lambda I(\vec{v})=0$
 $(A-\lambda I)\vec{v}=0$
 You can solve for $\lambda$ using in augmented matrix with this form
+
+Also $det(A-\lambda I)\vec{v} = 0$ to get values for $\lambda$. Recall $det(A)=0$ means noninvertible. If a matrix isn't invertible, then we won't get trivial solutions when solving. Also the idea of reducing the dimension through the transformation is relevant; squishing the basis vectors all onto the same span where the area/volume is 0. Recall eigenvectors remain on the same span despite a linear transformation.
 
 Notes:
 - $\lambda > 0 \implies A\vec{v}, \vec{v}$ point same direction
