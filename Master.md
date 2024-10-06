@@ -591,7 +591,7 @@ the rank of a matrix A is the dimension of its column space
 ## Nullity
 dim(Null A) = Nullity
 
-## Rank Theorem $\star$
+## Rank-Nullity Theorem $\star$
 If a mtrix A has n columns, then Rank A + dim Nul A = n
 
 ## Basis Theorem
@@ -658,6 +658,12 @@ stochastic matrix P , such that:
 A steady-state vector for P is a vector $\vec{q}$ such that $P \vec{q} = \vec{q}$.
 $(P-I)\vec{q} = 0$
 Fixed point, I/O the same
+Related to eigenvectors. $\vec{q}$ is defined as $lim_{k\rightarrow \infty} \left(P^k \vec{x_0}\right) = \vec{q}$, also $P\vec{q} = \vec{q}$
+When you reapply a linear transformation approaching infinity times, all the points in the subspace will approach the span of
+1. If the transformation is regular, a single eigenvector
+	1. For our regular stochastic matrices, this is what the steady state vector is.
+2. If the transformation is irregular, possibly multiple eigenvectors or none at all.
+
 
 Ex:
 Determine the steady state vector for $$P = \begin{bmatrix}
@@ -689,7 +695,9 @@ $$\therefore t = \begin{bmatrix}
 \end{bmatrix}$$
 # Convergence
 #### Regularity
-Stochastic matrix is regular if $P^k$ strictly has positive entries
+- Stochastic matrix is regular if there  $\exists (k \geq 1) P^k$ strictly has positive entries
+- Regular $\iff$ unique steady state vectors
+	- Irregular $\iff$ $0\leq n\not = 1$ steady state vectors
 
 Theorem
 > as k -> $\infty$
