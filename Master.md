@@ -503,6 +503,13 @@ Let A be an n x n matrix. These statements are all equivalent
 
 ## Abbreviated, invertible matrix theorem (IMT)
 $AB = I \implies A = B^{-1}, B = A^{-1},$ B is invertible, A is invertible
+- square A invertible iff
+	- 0 not eigenvalue of A
+	- $det A \not = 0$
+
+## Similarity
+* square A,B are similar $\iff$ we can find P so that $A = PBP^{-1}$
+* A,B similar $\implies$ same characteristic polynomial
 
 ## Singular
 Noninvertible
@@ -658,11 +665,6 @@ stochastic matrix P , such that:
 A steady-state vector for P is a vector $\vec{q}$ such that $P \vec{q} = \vec{q}$.
 $(P-I)\vec{q} = 0$
 Fixed point, I/O the same
-Related to eigenvectors. $\vec{q}$ is defined as $lim_{k\rightarrow \infty} \left(P^k \vec{x_0}\right) = \vec{q}$, also $P\vec{q} = \vec{q}$
-When you reapply a linear transformation approaching infinity times, all the points in the subspace will approach the span of
-1. If the transformation is regular, a single eigenvector
-	1. For our regular stochastic matrices, this is what the steady state vector is.
-2. If the transformation is irregular, possibly multiple eigenvectors or none at all.
 
 
 Ex:
@@ -698,6 +700,11 @@ $$\therefore t = \begin{bmatrix}
 - Stochastic matrix is regular if there  $\exists (k \geq 1) P^k$ strictly has positive entries
 - Regular $\iff$ unique steady state vectors
 	- Irregular $\iff$ $0\leq n\not = 1$ steady state vectors
+Related to eigenvectors. $\vec{q}$ is defined as $lim_{k\rightarrow \infty} \left(P^k \vec{x_0}\right) = \vec{q}$, also $P\vec{q} = \vec{q}$
+When you reapply a linear transformation approaching infinity times, all the points in the subspace will approach the span of
+1. If the transformation is regular, a single eigenvector
+	1. For our regular stochastic matrices, this is what the steady state vector is.
+2. If the transformation is irregular, possibly multiple eigenvectors or none at all. If multiple, points will converge to the closest possible eigenspace.
 
 Theorem
 > as k -> $\infty$
@@ -723,8 +730,6 @@ $A\vec{v}-\lambda I(\vec{v})=0$
 $(A-\lambda I)\vec{v}=0$
 You can solve for $\lambda$ using in augmented matrix with this form
 
-Also $det(A-\lambda I)\vec{v} = 0$ to get values for $\lambda$. Recall $det(A)=0$ means noninvertible. If a matrix isn't invertible, then we won't get trivial solutions when solving. Also the idea of reducing the dimension through the transformation is relevant; squishing the basis vectors all onto the same span where the area/volume is 0. Recall eigenvectors remain on the same span despite a linear transformation.
-
 Notes:
 - $\lambda > 0 \implies A\vec{v}, \vec{v}$ point same direction
 - $\lambda < 0 \implies A\vec{v}, \vec{v}$ point opposite direction
@@ -738,3 +743,9 @@ Notes:
 ### Eigenspaces
 * the span of the eigenvectors that correspond to a particular eigenvalue
 - $Nul(A-\lambda I)$
+
+# Characteristic Equation
+Also $det(A-\lambda I) = 0$ to get values for $\lambda$. Recall $det(T)=0$ means noninvertible. If a matrix isn't invertible, then we won't get trivial solutions when solving. Also the idea of reducing the dimension through the transformation is relevant; squishing the basis vectors all onto the same span where the area/volume is 0. Recall eigenvectors remain on the same span despite a linear transformation.
+
+### Characteristic Polynomial
+$det(A-\lambda I)$
