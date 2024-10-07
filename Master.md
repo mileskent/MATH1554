@@ -455,6 +455,8 @@ $A \in \mathbb{R}^{n \times n}$ is invertible $\iff \forall \vec{b} \in \mathbb{
 
 $det(A) \not = 0 \iff$ invertible  
 
+A is square and invertible $\iff$ it is row equivalent to the identity
+
 ## $2 \times 2$ Inverse Shortcut
 $$A = \begin{bmatrix}
 a & b \\
@@ -507,9 +509,6 @@ $AB = I \implies A = B^{-1}, B = A^{-1},$ B is invertible, A is invertible
 	- 0 not eigenvalue of A
 	- $det A \not = 0$
 
-## Similarity
-* square A,B are similar $\iff$ we can find P so that $A = PBP^{-1}$
-* A,B similar $\implies$ same characteristic polynomial
 
 ## Singular
 Noninvertible
@@ -734,7 +733,7 @@ Notes:
 - $\lambda > 0 \implies A\vec{v}, \vec{v}$ point same direction
 - $\lambda < 0 \implies A\vec{v}, \vec{v}$ point opposite direction
 - $\lambda$ can be complex even if nothing else in the equation is
-- *Eigenvalues cannot be determined from the reduced version of a matrix*
+- ***Eigenvalues cannot be determined from the reduced version of a matrix***
 	- i.e. row reductions change the eigenvalues of a matrix
 - The diagonal elements of a triangular matrix are its eigenvalues.
 - A invertible iff 0 is not an eigenvalue of A.
@@ -759,4 +758,8 @@ n degree polynomial -> n roots -> maximum n eigenvalues (could be repeated)
 Algebraic multiplicity of an eigenvalue is how many times an eigenvalue repeatedly occurs as the root of the characteristic polynomial.
 
 ### Geometric Multiplicity
-Geometric multiplicity of an eigenvalue is the number of eigenvectors associated with an eigenvalue; $dim(Nul(A-\lambda I))$, which is saying how many eigenvector solutions does this eigenvalue have
+Geometric multiplicity of an eigenvalue is the number of eigenvectors associated with an eigenvalue; $dim(Nul(A-\lambda I))$, which is saying how many eigenvector solutions does this eigenvalue have (recall $dim(B)$ is number of free vars in $B$)
+
+## Similarity
+1. square A,B are similar $\iff$ we can find P so that $A = PBP^{-1}$
+2. A,B similar $\implies$ same characteristic polynomial $\implies$ same eigenvalues
