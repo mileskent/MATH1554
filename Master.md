@@ -200,7 +200,8 @@ $$\vec{x} = \begin{bmatrix}
 \end{bmatrix} t$$
 
 ## Nonhomogenous System
-Because right side of augmented is nonzero
+
+Because right side of augmented is nonzero:
 $$\begin{bmatrix}
 1 & 3 & 1 & 9 \\
 2 & -1 & -5 & 11 \\
@@ -317,7 +318,6 @@ $$\vec{v} = \begin{bmatrix}
 5
 \end{bmatrix}
 $$
-#star
 Give a 
 $\vec{c} \in \mathbb{R}^3 | \neg \exists \vec{v} | T(\vec{v}) = \vec{c}$
 $\lor$
@@ -440,22 +440,29 @@ e & f
 a & b & c \\
 d & e & f
 \end{bmatrix}$$
+### Transpose Properties
 $(A^T)^T = A$
 $(A + B)^T + A^T + B^T$
 $(sA)^T = s(A^T)$
 $(AB)^T = B^T A^T$
 
 ## Invertibility
-A property of only square matrices, because Matrix A is invertible if and only if it is row equivalent to the identity.
+Definition:
 $A \in \mathbb{R}^{n \times n}$ is invertible if $\exists C \in \mathbb{R}^{n \times n} s.t. AC = CA = I_n$
 
-$A \in \mathbb{R}^{n \times n}$ is invertible $\iff \forall \vec{b} \in \mathbb{R}^n\ \exists !\ \vec{x}\ s.t.\ A \vec{x} = \vec{b}$
+A is invertible $\implies$ A is square
+A is invertible $\iff$ it is row equivalent to the identity
 
-$det(A) \not = 0 \iff$ invertible  
-
-A is square and invertible $\iff$ it is row equivalent to the identity
-
-## $2 \times 2$ Inverse Shortcut
+also
+- $A \in \mathbb{R}^{n \times n}$ is invertible $\iff \forall \vec{b}\ \exists ! \vec{x}\ (A \vec{x} = \vec{b})$
+	- Basically means that A is 1-1 and Onto, meaning that there is exactly one domain entry for every codomain entry 
+		- (1-1 is at most 1, Onto is at least 1, together they make exactly 1)
+- $det(A) \not = 0 \iff$ invertible  
+## Inverse Properties
+$(A^{-1})^{-1} = A$
+$(AB)^{-1} = B^{-1} A^{-1}$
+$(A^T)^{-1} = (A^{-1})^T$
+#### $2 \times 2$ Inverse Shortcut
 $$A = \begin{bmatrix}
 a & b \\
 c & d
@@ -470,11 +477,6 @@ d & -b \\
 -c & a
 \end{bmatrix}
 $$
-## Inverse Properties
-$(A^{-1})^{-1} = A$
-$(AB)^{-1} = B^{-1} A^{-1}$
-$(A^T)^{-1} = (A^{-1})^T$
-
 ## Elementary Matrix
 An elementary matrix, E, is one that differs by $I_n$ by one row operation.
 ## General way to compute inverse
@@ -485,8 +487,7 @@ $(E^n E^{n-1} ... E_1) A = I_n$
 then
 $(E^n E^{n-1} ... E_1) = A^{-1}$
 
-
-## Invertible Matrix Properties
+## Invertible Matrix Theorem - Properties
 Let A be an n x n matrix. These statements are all equivalent
 > a) A is invertible.
 > b) A is row equivalent to I^n.
@@ -503,23 +504,20 @@ Let A be an n x n matrix. These statements are all equivalent
 
 ## Abbreviated, invertible matrix theorem (IMT)
 $AB = I \implies A = B^{-1}, B = A^{-1},$ B is invertible, A is invertible
-- square A invertible iff
-	- 0 not eigenvalue of A
-	- $det A \not = 0$
-
-
+square A invertible $\iff$
+- 0 not eigenvalue of A
+- $det A \not = 0$
 ## Singular
 Noninvertible
-
 ## Partitioned/Block Matrix
 A partitioned matrix is a matrix that you write as a matrix of matrices
 When doing multiplication with a block matrix, make sure the "receiving" matrix's entries go first, to respect the lack of commutativity in matrix multiplication. See HW 2.4 if this doesn't make sense.
-
 ## Row Column Method
 Let A be m x n and B be n x p matrix. Then, the (i, j) entry of AB is 
 row_i A · col_j B.
 This is the Row Column Method for matrix multiplication
 
+#### Notable HW Problem
 ![[Pasted image 20240917100516.png]]
 
 # LU Factorization
@@ -534,7 +532,7 @@ matrix with 1’s on the diagonal, U is an echelon form of A.
 Suppose A can be row reduced to echelon form U without interchanging
 rows. Then,
 $E_p ... E_0 A = U$
-$A = LU = (E_p ... E_0)^{-1}$
+$A = LU = (E_p ... E_0)^{-1}U$
 To compute the LU decomposition:
 1. Reduce A to an echelon form U by a sequence of row replacement
 operations, if possible.
@@ -542,35 +540,28 @@ operations, if possible.
 reduces L to I.
 
 ## Subspaces of $\mathbb{R}^n$
-Subset
+### Subset
 A subset of $\mathbb{R}^n$, for example, is any collection of vectors that are in $\mathbb{R}^n$
-
-Subspace
+### Subspace
 A subset H of $\mathbb{R}^n$ is a subspace if it is closed within scalar multiplication and vector addition, i.e. 
-$c \in \mathbb{R}; \vec{u}, \vec{v} \in H$
-$c \vec{u} \in H$, $\vec{u} + \vec{v} \in H$
-
-when c = 0 then $\vec{0} \in H$
-
-Columnspace
+- $c \in \mathbb{R}; \vec{u}, \vec{v} \in H$
+- $c \vec{u} \in H$, $\vec{u} + \vec{v} \in H$
+-  $\vec{0} \in H$
+### Columnspace
 span of columns of A
 same as range of A
-
-Nullspace
+### Nullspace
 span of set of $\vec{x}$ that satisfy $A\vec{x} = \vec{0}$
 Null $A = \{\vec{x} | A\vec{x} = \vec{0}\}$
-
-Basis
+### Basis
 Linearly independent vectors that span a subspace
-
-# Coordinates, relative to a basis
+## Coordinates, relative to a basis
 There are many different possible choice of basis for a subspace. Our choice can give us dramatically different properties.
 
 Standard basis are i, j, k, but you can use other vectors to span the same amount of space if you want.
 
-Qs: 
-1. What is a determinant? Given a linear transformation T, let us focus on the magnitude of the cross product of the basis vectors. The determinant would be the scalar factor between the original and transformed areas?
-2. If you are calculating some integral over a transformed space, is the jacobian just the determinant of the transformation, or is it related---possibly scaling the result to make sense given standard basis vectors?
+1. What is a determinant? Given a linear transformation T, let us focus on the magnitude of the cross product of the basis vectors. The determinant would be the scalar factor between the original and transformed areas? (Yes)
+2. If you are calculating some integral over a transformed space, is the jacobian just the determinant of the transformation, or is it related---possibly scaling the result to make sense given standard basis vectors? (Yes)
 
 ## Dimension
 Dimension/Cardinality of a non-zero subspace H, dim H, is the number of vectors in the basis of H. We define dim{0} = 0.
@@ -584,32 +575,45 @@ Theorem
 	2. use the idea of # 3
 	3. n variables, solve for $x_1$ ito everything else. -> one pivot everything else free vars. Therefore n - 1 free vars
 3. dim(Null A) is the number of 
-	1. # of free vars
+	1. $\#$ of free vars
 4. dim(Col A) is the number of 
-	1. # of pivots
+	1. $\#$ of pivots
 
 ## Rank
 the rank of a matrix A is the dimension of its column space
-
-![[Pasted image 20240923104520.png|400]]
+$\#$ of pivots
 ## Nullity
 dim(Null A) = Nullity
-
+$\#$ of free vars
+#### Notation from class
+- Let $\mathcal{B} \in H$
+	- $\mathcal{B} = \{\vec{b_1}, ..., \vec{b_n}\}$
+	- $\mathcal{B}$ is some basis for the subspace $H$
+$$
+\displaylines{
+\vec{x} \in H \implies \\
+\text{coords of $\vec{x}$ relative to $\mathcal{B}$ are $c_1, . . . , c_n$}\quad \vec{x} = c_1 \vec{b_1} + ... + c_n \vec{b_n}\quad\\ \\ \land \\
+\text{coord vector of } \vec{x} \text{ relative to } \mathcal{B}\quad [\vec{x}]_{\mathcal{B}} = \begin{bmatrix}
+c_1 \\
+... \\
+c_n
+\end{bmatrix}
+}
+$$
+![[Pasted image 20240923104520.png|400]]
 ## Rank-Nullity Theorem $\star$
-If a mtrix A has n columns, then Rank A + dim Nul A = n
-
+If a matrix A has n columns, then 
+> $Rank(A) + Nullity(A) = n$
+> $dim(Col(A)) + dim(Nul(A)) = n$
 ## Basis Theorem
-Any two bases for a subspace have the same dimension
-
+> Any two bases for a subspace have the same dimension
 ## Invertibility Theorem
-Let A be a n x n matrix. These conditions are equivalent.
-1. A is invertible
-2. The columns of A are a basis for $\mathbb{R}^n$
-3. Col A = $\mathbb{R}^n$
-4. rank A = dim Col A = n
-5. Null A = {0}
-
-
+> Let A be a n x n matrix. These conditions are equivalent.
+> 1. A is invertible
+> 2. The columns of A are a basis for $\mathbb{R}^n$
+> 3. Col A = $\mathbb{R}^n$
+> 4. rank A = dim Col A = n
+> 5. Null A = {0}
 # Determinant
 Imagine the area of parallelogram created by the basis of a standard vector space, like $\mathbb{R}^2$. Now apply a linear transformation $A$ to that vector space. The new area of the new parallelogram has been scaled by a factor of the determinant.
 $S$ is the parallelopiped. $$volume(T(S)) = |det(A)| \cdot volume(S)$$

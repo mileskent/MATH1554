@@ -1,8 +1,13 @@
 > Sections: 2.2-5, 2.8-9, 3.1-3, 4.9, 5.1-2
-### Lecture Slides
-[Lecture Slides 1](https://sbarone7.math.gatech.edu/Chapters_1_and_2.pdf)
-[Lecture Slides 2](https://sbarone7.math.gatech.edu/Chapters_3_thru_5.pdf)
 ### Checklist
+- [ ] Review slides
+	- [x] [Lecture Slides 1](https://sbarone7.math.gatech.edu/Chapters_1_and_2.pdf)
+		- [x] 2.2-5
+		- [x] 2.8-9
+	- [ ] [Lecture Slides 2](https://sbarone7.math.gatech.edu/Chapters_3_thru_5.pdf)
+		- [ ] 3.1-3
+		- [ ] 4.9
+		- [ ] 5.1-2
 - [ ] Complete all practice review sets
 	- [ ] [Midterm 2 Lecture Review Activity](https://sbarone7.math.gatech.edu/M2ReviewActivity.pdf)
 - [ ] Complete all practice exams
@@ -15,5 +20,3 @@
 	- [ ] [Additional Review Set for Midterm 2 (1554)](https://sbarone7.math.gatech.edu/ma1554_exam2_additional.pdf)
 	- [ ] [M2 Review WW ](https://gatech.instructure.com/courses/405572/assignments/1819970)
 	- [ ] Old WW Problems
-
-
