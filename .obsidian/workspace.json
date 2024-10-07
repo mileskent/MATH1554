@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "88ed8c89bf6c99eb",
+        "id": "405235a311883ca0",
         "type": "tabs",
         "children": [
           {
-            "id": "28996b6407c396a7",
+            "id": "ee2c6e89eb8fe5d3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Markovtag:#Markovtag:#Markov",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,13 +65,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "b80babd72f3db4a0",
@@ -149,10 +147,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "28996b6407c396a7",
+  "active": "ee2c6e89eb8fe5d3",
   "lastOpenFiles": [
-    "Pasted image 20241007112930.png",
-    "Pasted image 20241007112916.png",
+    "M Preps/M2 Review.md",
+    "Master.md",
+    "M Preps",
+    "Images/Pasted image 20241007112930.png",
+    "Images/Pasted image 20241007112916.png",
     "Master.md~",
     "Images/augmented-matrix.png",
     "Images/Pasted image 20240923104520.png",
@@ -161,10 +162,8 @@
     "Images/Pasted image 20240821100548.png",
     "Images/Pasted image 20240821095448.png",
     "Images",
-    "Pasted image 20241002101441.png",
-    "Pasted image 20241002094128.png",
-    "Pasted image 20241002094044.png",
-    "Master.md",
+    "Images/Pasted image 20241002101441.png",
+    "Images/Pasted image 20241002094128.png",
     "().md",
     "Welcome.md"
   ]

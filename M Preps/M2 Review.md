@@ -1,0 +1,19 @@
+> Sections: 2.2-5, 2.8-9, 3.1-3, 4.9, 5.1-2
+### Lecture Slides
+[Lecture Slides 1](https://sbarone7.math.gatech.edu/Chapters_1_and_2.pdf)
+[Lecture Slides 2](https://sbarone7.math.gatech.edu/Chapters_3_thru_5.pdf)
+### Checklist
+- [ ] Complete all practice review sets
+	- [ ] [Midterm 2 Lecture Review Activity](https://sbarone7.math.gatech.edu/M2ReviewActivity.pdf)
+- [ ] Complete all practice exams
+	- [ ] [sample exam set](https://gatech.instructure.com/courses/114544/pages/sample-exams)
+	- [ ] [M2B](https://sbarone7.math.gatech.edu/ma1554_exam2_reviewB.pdf)
+	- [ ] [M2A](https://sbarone7.math.gatech.edu/ma1554_exam2_reviewA.pdf)
+	- [ ] [Spring 2017 M2](https://sbarone7.math.gatech.edu/ma1553s_exam2.pdf)
+- [ ] Additional Problems
+	- [ ] [Additional Problems for Midterm 2 Review (1553)](https://sbarone7.math.gatech.edu/ma1553s_exam2_review.pdf)
+	- [ ] [Additional Review Set for Midterm 2 (1554)](https://sbarone7.math.gatech.edu/ma1554_exam2_additional.pdf)
+	- [ ] [M2 Review WW ](https://gatech.instructure.com/courses/405572/assignments/1819970)
+	- [ ] Old WW Problems
+
+

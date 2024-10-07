@@ -1,8 +1,6 @@
+#todo For whole thing, need to modularize with definition and such
 [Barone Website](https://sbarone7.math.gatech.edu/ma1554s24.html)
 [Master Website](https://gatech.instructure.com/courses/114544)
-
-course id: *barone36886*
-
 # Systems of Linear Equations
 https://sbarone7.math.gatech.edu/Chapters_1_and_2.pdf
 ## Linear Equation
