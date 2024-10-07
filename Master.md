@@ -749,3 +749,4 @@ Also $det(A-\lambda I) = 0$ to get values for $\lambda$. Recall $det(T)=0$ means
 
 ### Characteristic Polynomial
 $det(A-\lambda I)$
+n degree polynomial -> n roots -> maximum n eigenvalues (could be repeated)
