@@ -645,72 +645,6 @@ A is invertible if and only if det A 6 = 0.
 det(AB) = det A · det B
 det(A^-1) = 1/det(A)
 
-# Markov chains
-Matrix that uses the rates/probabilities: stochastic matrix
-![[Pasted image 20241002094128.png]]
-Columns are probability vectors.
-Sum to 1
-#### Probability Vector
-Some vector $\vec{x}$ with nonnegative elements that sum to 1
-#### Stochastic Matrix
-A stochastic matrix is a square matrix, P , whose columns are
-probability vectors.
-|det (P)| <= 1, only volume contracting or preserving
-#### Markov Chain
-A Markov chain is a sequence of probability vectors ~x k , and a
-stochastic matrix P , such that:
- $$P^k \vec{x_0} = \vec{x}_k$$$$\vec{x}_{k+1} = P \vec{x}_k ; k = 0, 1, 2, . . .$$
-#### Steady-State Vector
-A steady-state vector for P is a vector $\vec{q}$ such that $P \vec{q} = \vec{q}$.
-$(P-I)\vec{q} = 0$
-Fixed point, I/O the same
-
-
-Ex:
-Determine the steady state vector for $$P = \begin{bmatrix}
-.8 & .3 \\
-.2 & .7
-\end{bmatrix}$$
-Goal: solve $P\vec{q} = \vec{q}$
-$(P-I)\vec{q} = \vec{q}$
-$$\begin{bmatrix}
-.8-1 & .3 & 0 \\
-.2 & .7-1 & 0
-\end{bmatrix}$$
-$$\begin{bmatrix}
--.2 & .3 & 0 \\
-.2 & -.3 & 0
-\end{bmatrix}$$ ~
-$$\begin{bmatrix}
-1 & -\frac{3}{2} & 0 \\
-0 & 0 & 0
-\end{bmatrix}$$
-$$\therefore \vec{q} = t\begin{bmatrix}
-\frac{3}{2} \\
-1
-\end{bmatrix}$$
-$$\frac{3}{2}t + t = 1$$
-$$\therefore t = \begin{bmatrix}
-\frac{3}{5} \\
-\frac{2}{5}
-\end{bmatrix}$$
-# Convergence
-#### Regularity
-- Stochastic matrix is regular if there  $\exists (k \geq 1) P^k$ strictly has positive entries
-- Regular $\iff$ unique steady state vectors
-	- Irregular $\iff$ $0\leq n\not = 1$ steady state vectors
-Related to eigenvectors. $\vec{q}$ is defined as $lim_{k\rightarrow \infty} \left(P^k \vec{x_0}\right) = \vec{q}$, also $P\vec{q} = \vec{q}$
-When you reapply a linear transformation approaching infinity times, all the points in the subspace will approach the span of
-1. If the transformation is regular, a single eigenvector
-	1. For our regular stochastic matrices, this is what the steady state vector is.
-2. If the transformation is irregular, possibly multiple eigenvectors or none at all. If multiple, points will converge to the closest possible eigenspace.
-
-Theorem
-> as k -> $\infty$
-> $$\vec{x}_{k+1} = P \vec{x}_k ; k = 0, 1, 2, . . .$$
-> 
-> If $P$ is a regular stochastic matrix, then $P$ has a unique steady-state vector $\vec{q}$, and $\vec{x_{k+1}} = P\vec{x_k}$ converges to $\vec{q}$ as $k \rightarrow \infty$; $(P^k \vec{x_0} \longrightarrow_{k\rightarrow \infty} \vec{q})$ where $P\vec{q} = \vec{q}$
-
 # Eigenvectors, Eigenvalues, and Eigenspaces
 ### Eigenvectors and Eigenvalues
 Given
@@ -744,15 +678,16 @@ Notes:
 - $Nul(A-\lambda I)$
 
 # Characteristic Equation
-Also $det(A-\lambda I) = 0$ to get values for $\lambda$. Recall $det(T)=0$ means noninvertible. If a matrix isn't invertible, then we won't get trivial solutions when solving. Also the idea of reducing the dimension through the transformation is relevant; squishing the basis vectors all onto the same span where the area/volume is 0. Recall eigenvectors remain on the same span despite a linear transformation.
+$det(A-\lambda I) = 0$ to get values for $\lambda$. Recall $det(T)=0$ means noninvertible. If a matrix isn't invertible, then we won't get trivial solutions when solving. Also the idea of reducing the dimension through the transformation is relevant; squishing the basis vectors all onto the same span where the area/volume is 0. Recall eigenvectors remain on the same span despite a linear transformation.
 
-$\lambda$ is an eigenvalue of A $\iff$ $(A-\lambda I)$ is not invertible
+$\lambda$ is an eigenvalue of A $\iff$ $(A-\lambda I)$ is singular
 
 trace of a Matrix $tr(M)$ is the sum of diagonal
 
 ### Characteristic Polynomial
 $det(A-\lambda I)$
 n degree polynomial -> n roots -> maximum n eigenvalues (could be repeated)
+![[Pasted image 20241007112930.png|400]]
 
 ### Algebraic Multiplicity
 Algebraic multiplicity of an eigenvalue is how many times an eigenvalue repeatedly occurs as the root of the characteristic polynomial.
@@ -763,3 +698,79 @@ Geometric multiplicity of an eigenvalue is the number of eigenvectors associated
 ## Similarity
 1. square A,B are similar $\iff$ we can find P so that $A = PBP^{-1}$
 2. A,B similar $\implies$ same characteristic polynomial $\implies$ same eigenvalues
+# Markov chains
+Stochastic matrix
+- Matrix that uses the rates/probabilities
+- Columns are probability vectors.
+- Sum to 1
+![[Pasted image 20241002094128.png|500]]
+
+#### Probability Vector
+Some vector $\vec{x}$ with nonnegative elements that sum to 1
+#### Stochastic Matrix
+A stochastic matrix is a square matrix, P , whose columns are
+probability vectors.
+|det(P)| <= 1, only volume contracting or preserving
+#### Markov Chain
+A Markov chain is a sequence of probability vectors, and a
+stochastic matrix P , such that:
+ $$
+ \displaylines{
+ P^k \vec{x_0} = \vec{x}_k\\
+ \vec{x}_{k+1} = P \vec{x}_k ; k = 0, 1, 2, . . .
+ }
+ $$
+# Convergence
+#### Regularity
+- Stochastic matrix is regular if there  $\exists (k \geq 1) P^k$ strictly has positive entries
+- Regular $\iff$ unique steady state vectors
+	- Irregular $\iff$ $0\leq n\not = 1$ steady state vectors
+#### Steady-State Vector
+A steady-state vector for P is a vector $\vec{q}$ such that $P \vec{q} = \vec{q}$.
+$(P-I)\vec{q} = 0$
+Fixed point, I/O the same
+
+
+Ex:
+Determine the steady state vector for $$P = \begin{bmatrix}
+.8 & .3 \\
+.2 & .7
+\end{bmatrix}$$
+Goal: solve $P\vec{q} = \vec{q}$
+$(P-I)\vec{q} = \vec{q}$
+$$
+\displaylines{
+\begin{bmatrix}
+.8-1 & .3 & 0 \\
+.2 & .7-1 & 0
+\end{bmatrix}\\
+\begin{bmatrix}
+-.2 & .3 & 0 \\
+.2 & -.3 & 0
+\end{bmatrix}\\
+\begin{bmatrix}
+1 & -\frac{3}{2} & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+}
+$$
+$$\therefore \vec{q} = t\begin{bmatrix}
+\frac{3}{2} \\
+1
+\end{bmatrix}$$
+$$\frac{3}{2}t + t = 1$$
+$$\therefore t = \begin{bmatrix}
+\frac{3}{5} \\
+\frac{2}{5}
+\end{bmatrix}$$
+Related to eigenvectors. $\vec{q}$ is defined as $lim_{k\rightarrow \infty} \left(P^k \vec{x_0}\right) = \vec{q}$, also $P\vec{q} = \vec{q}$
+When you reapply a linear transformation approaching infinity times, all the points in the subspace will approach the span of
+1. If the transformation is regular, a single eigenvector
+	1. For our regular stochastic matrices, this is what the steady state vector is.
+2. If the transformation is irregular, possibly multiple eigenvectors or none at all. If multiple, points will converge to the closest possible eigenspace.
+
+Theorem
+> as k -> $\infty$
+> $$\vec{x}_{k+1} = P \vec{x}_k ; k = 0, 1, 2, . . .$$
+> 
+> If $P$ is a regular stochastic matrix, then $P$ has a unique steady-state vector $\vec{q}$, and $\vec{x_{k+1}} = P\vec{x_k}$ converges to $\vec{q}$ as $k \rightarrow \infty$; $(P^k \vec{x_0} \longrightarrow_{k\rightarrow \infty} \vec{q})$ where $P\vec{q} = \vec{q}$
