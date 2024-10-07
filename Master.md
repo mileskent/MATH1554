@@ -575,16 +575,16 @@ Theorem
 	2. use the idea of # 3
 	3. n variables, solve for $x_1$ ito everything else. -> one pivot everything else free vars. Therefore n - 1 free vars
 3. dim(Null A) is the number of 
-	1. $\#$ of free vars
+	1. number of free vars
 4. dim(Col A) is the number of 
-	1. $\#$ of pivots
+	1. number of pivots
 
 ## Rank
 the rank of a matrix A is the dimension of its column space
-$\#$ of pivots
+number of pivots
 ## Nullity
 dim(Null A) = Nullity
-$\#$ of free vars
+number of of free vars
 #### Notation from class
 - Let $\mathcal{B} \in H$
 	- $\mathcal{B} = \{\vec{b_1}, ..., \vec{b_n}\}$
@@ -616,20 +616,26 @@ If a matrix A has n columns, then
 > 5. Null A = {0}
 # Determinant
 Imagine the area of parallelogram created by the basis of a standard vector space, like $\mathbb{R}^2$. Now apply a linear transformation $A$ to that vector space. The new area of the new parallelogram has been scaled by a factor of the determinant.
-$S$ is the parallelopiped. $$volume(T(S)) = |det(A)| \cdot volume(S)$$
+$S$ is the parallelopiped. $$area(T(S)) = |det(A)| \cdot area(S)$$
 You can also just think of it as the area of the parallelogram spanned by the columns of a matrix
 R^3 and beyond -> parallelopiped and volume
 (assume n by n matrix because we only know how to find determinants for square matrices)
 
-If det = 0 A is noninvertible
-
-det Triangular = product of diagonals
-
+You can also get the area of S by using the determinant of the matrix created by the vectors that span S, i.e.
+$|\vec{a} \times \vec{b}| = area(S) \implies |det([\vec{a}\ \ \vec{b}])| = area(S)$
+because you are shifting the standard basis vectors into the vector space dictated by S
+### Determinant Laws
+- det(A) = 0 $\iff$ A is singular
+	- det(A) $\not =$ 0 $\iff$ A is invertible
+- det(Triangular) = product of diagonals
+- det A = det $A^T$ 
+- det(AB) = det A · det B
+- $det(A^{-1}) = \frac{1}{det(A)}$
+## Determinant Post Row Operations
 if A square:
-* if adding rows to rows on A to get B then det A = det B
-* if swapping rows in A to get B then det A = -det B
-* if scaling one row of A by k, then det B = k det A
-
+* if adding rows to rows on A to get B then $det A = det B$
+* if swapping rows in A to get B then $-det A = det B$
+* if scaling one row of A by k, then $k \cdot det(A)$ = $det(B)$
 ## Cofactor expansion
 What the diagonal 3x3 is shorthand for
 Cofactor of an n x n matrix A is $C_{ij} = (-1)^{i+j} det A_{ij}$
@@ -641,11 +647,6 @@ $$\begin{bmatrix}
 \end{bmatrix}$$
 det A = $a_{1j}C_{1j} + ... + a_{nj} C_{nj}$
 For +/- use pattern of current matrix in Q, not the og
-
-det A = det A^T .
-A is invertible if and only if det A 6 = 0.
-det(AB) = det A · det B
-det(A^-1) = 1/det(A)
 
 # Eigenvectors, Eigenvalues, and Eigenspaces
 ### Eigenvectors and Eigenvalues

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Master.md",
+                "file": "M Preps/M2 Review.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Master.md",
+                "file": "M Preps/M2 Review.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Master.md",
+                "file": "M Preps/M2 Review.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Master.md"
+                "file": "M Preps/M2 Review.md"
               }
             }
           }
@@ -149,8 +149,8 @@
   },
   "active": "ee2c6e89eb8fe5d3",
   "lastOpenFiles": [
-    "M Preps/M2 Review.md",
     "Master.md",
+    "M Preps/M2 Review.md",
     "M Preps",
     "Images/Pasted image 20241007112930.png",
     "Images/Pasted image 20241007112916.png",
