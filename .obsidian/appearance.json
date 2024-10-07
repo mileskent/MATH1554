@@ -2,5 +2,6 @@
   "accentColor": "#c16815",
   "theme": "obsidian",
   "monospaceFontFamily": "UbuntuMono Nerd Font Mono",
-  "baseFontSizeAction": true
+  "baseFontSizeAction": true,
+  "baseFontSize": 17
 }

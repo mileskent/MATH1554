@@ -453,6 +453,12 @@ $A \in \mathbb{R}^{n \times n}$ is invertible if $\exists C \in \mathbb{R}^{n \t
 A is invertible $\implies$ A is square
 A is invertible $\iff$ it is row equivalent to the identity
 
+#star 
+Linearly dependent $\iff$ Singular
+- Mnemonic: After the trial, Johnny Depp was Single
+Linearly independent $\iff$ Invertible
+- This is just the inverse of the above
+
 also
 - $A \in \mathbb{R}^{n \times n}$ is invertible $\iff \forall \vec{b}\ \exists ! \vec{x}\ (A \vec{x} = \vec{b})$
 	- Basically means that A is 1-1 and Onto, meaning that there is exactly one domain entry for every codomain entry 
@@ -567,7 +573,9 @@ Standard basis are i, j, k, but you can use other vectors to span the same amoun
 Dimension/Cardinality of a non-zero subspace H, dim H, is the number of vectors in the basis of H. We define dim{0} = 0.
 
 Theorem
-*Any two choices of $\mathcal{B}_1$, $\mathcal{B}_2$ of a non-zero subspace H have the same dimension*
+> Any two choices of $\mathcal{B}_1$, $\mathcal{B}_2$ of a non-zero subspace H have the same dimension*
+
+Ex Problems
 1. dim $\mathbb{R}^n$
 	1. n
 2. H = $\{(x_1 ...., x_n) : x_1 + ... + x_n = 0\}$ has dimension
@@ -670,7 +678,7 @@ Notes:
 - $\lambda > 0 \implies A\vec{v}, \vec{v}$ point same direction
 - $\lambda < 0 \implies A\vec{v}, \vec{v}$ point opposite direction
 - $\lambda$ can be complex even if nothing else in the equation is
-- ***Eigenvalues cannot be determined from the reduced version of a matrix***
+- ***Eigenvalues cannot be determined from the reduced version of a matrix*** #star
 	- i.e. row reductions change the eigenvalues of a matrix
 - The diagonal elements of a triangular matrix are its eigenvalues.
 - A invertible iff 0 is not an eigenvalue of A.
