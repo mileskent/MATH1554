@@ -8,8 +8,8 @@
 		- [x] 3.1-3
 		- [x] 4.9
 		- [x] 5.1-2
-- [ ] Complete all practice review sets
-	- [ ] [Midterm 2 Lecture Review Activity](https://sbarone7.math.gatech.edu/M2ReviewActivity.pdf)
+- [x] Complete all practice review sets
+	- [x] [Midterm 2 Lecture Review Activity](https://sbarone7.math.gatech.edu/M2ReviewActivity.pdf)
 - [ ] Complete all practice exams
 	- [ ] [sample exam set](https://gatech.instructure.com/courses/114544/pages/sample-exams)
 	- [ ] [M2B](https://sbarone7.math.gatech.edu/ma1554_exam2_reviewB.pdf)
