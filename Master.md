@@ -1,8 +1,6 @@
+#todo For whole thing, need to modularize with definition and such
 [Barone Website](https://sbarone7.math.gatech.edu/ma1554s24.html)
 [Master Website](https://gatech.instructure.com/courses/114544)
-
-course id: *barone36886*
-
 # Systems of Linear Equations
 https://sbarone7.math.gatech.edu/Chapters_1_and_2.pdf
 ## Linear Equation
@@ -202,7 +200,8 @@ $$\vec{x} = \begin{bmatrix}
 \end{bmatrix} t$$
 
 ## Nonhomogenous System
-Because right side of augmented is nonzero
+
+Because right side of augmented is nonzero:
 $$\begin{bmatrix}
 1 & 3 & 1 & 9 \\
 2 & -1 & -5 & 11 \\
@@ -319,7 +318,6 @@ $$\vec{v} = \begin{bmatrix}
 5
 \end{bmatrix}
 $$
-#star
 Give a 
 $\vec{c} \in \mathbb{R}^3 | \neg \exists \vec{v} | T(\vec{v}) = \vec{c}$
 $\lor$
@@ -442,22 +440,35 @@ e & f
 a & b & c \\
 d & e & f
 \end{bmatrix}$$
+### Transpose Properties
 $(A^T)^T = A$
 $(A + B)^T + A^T + B^T$
 $(sA)^T = s(A^T)$
 $(AB)^T = B^T A^T$
 
 ## Invertibility
-A property of only square matrices, because Matrix A is invertible if and only if it is row equivalent to the identity.
+Definition:
 $A \in \mathbb{R}^{n \times n}$ is invertible if $\exists C \in \mathbb{R}^{n \times n} s.t. AC = CA = I_n$
 
-$A \in \mathbb{R}^{n \times n}$ is invertible $\iff \forall \vec{b} \in \mathbb{R}^n\ \exists !\ \vec{x}\ s.t.\ A \vec{x} = \vec{b}$
+A is invertible $\implies$ A is square
+A is invertible $\iff$ it is row equivalent to the identity
 
-$det(A) \not = 0 \iff$ invertible  
+#star 
+Linearly dependent $\iff$ Singular
+- Mnemonic: After the trial, Johnny Depp was Single
+Linearly independent $\iff$ Invertible
+- This is just the inverse of the above
 
-A is square and invertible $\iff$ it is row equivalent to the identity
-
-## $2 \times 2$ Inverse Shortcut
+also
+- $A \in \mathbb{R}^{n \times n}$ is invertible $\iff \forall \vec{b}\ \exists ! \vec{x}\ (A \vec{x} = \vec{b})$
+	- Basically means that A is 1-1 and Onto, meaning that there is exactly one domain entry for every codomain entry 
+		- (1-1 is at most 1, Onto is at least 1, together they make exactly 1)
+- $det(A) \not = 0 \iff$ invertible  
+## Inverse Properties
+$(A^{-1})^{-1} = A$
+$(AB)^{-1} = B^{-1} A^{-1}$
+$(A^T)^{-1} = (A^{-1})^T$
+#### $2 \times 2$ Inverse Shortcut
 $$A = \begin{bmatrix}
 a & b \\
 c & d
@@ -472,11 +483,6 @@ d & -b \\
 -c & a
 \end{bmatrix}
 $$
-## Inverse Properties
-$(A^{-1})^{-1} = A$
-$(AB)^{-1} = B^{-1} A^{-1}$
-$(A^T)^{-1} = (A^{-1})^T$
-
 ## Elementary Matrix
 An elementary matrix, E, is one that differs by $I_n$ by one row operation.
 ## General way to compute inverse
@@ -487,8 +493,7 @@ $(E^n E^{n-1} ... E_1) A = I_n$
 then
 $(E^n E^{n-1} ... E_1) = A^{-1}$
 
-
-## Invertible Matrix Properties
+## Invertible Matrix Theorem - Properties
 Let A be an n x n matrix. These statements are all equivalent
 > a) A is invertible.
 > b) A is row equivalent to I^n.
@@ -505,23 +510,20 @@ Let A be an n x n matrix. These statements are all equivalent
 
 ## Abbreviated, invertible matrix theorem (IMT)
 $AB = I \implies A = B^{-1}, B = A^{-1},$ B is invertible, A is invertible
-- square A invertible iff
-	- 0 not eigenvalue of A
-	- $det A \not = 0$
-
-
+square A invertible $\iff$
+- 0 not eigenvalue of A
+- $det A \not = 0$
 ## Singular
 Noninvertible
-
 ## Partitioned/Block Matrix
 A partitioned matrix is a matrix that you write as a matrix of matrices
 When doing multiplication with a block matrix, make sure the "receiving" matrix's entries go first, to respect the lack of commutativity in matrix multiplication. See HW 2.4 if this doesn't make sense.
-
 ## Row Column Method
 Let A be m x n and B be n x p matrix. Then, the (i, j) entry of AB is 
 row_i A · col_j B.
 This is the Row Column Method for matrix multiplication
 
+#### Notable HW Problem
 ![[Pasted image 20240917100516.png]]
 
 # LU Factorization
@@ -536,7 +538,7 @@ matrix with 1’s on the diagonal, U is an echelon form of A.
 Suppose A can be row reduced to echelon form U without interchanging
 rows. Then,
 $E_p ... E_0 A = U$
-$A = LU = (E_p ... E_0)^{-1}$
+$A = LU = (E_p ... E_0)^{-1}U$
 To compute the LU decomposition:
 1. Reduce A to an echelon form U by a sequence of row replacement
 operations, if possible.
@@ -544,41 +546,36 @@ operations, if possible.
 reduces L to I.
 
 ## Subspaces of $\mathbb{R}^n$
-Subset
+### Subset
 A subset of $\mathbb{R}^n$, for example, is any collection of vectors that are in $\mathbb{R}^n$
-
-Subspace
+### Subspace
 A subset H of $\mathbb{R}^n$ is a subspace if it is closed within scalar multiplication and vector addition, i.e. 
-$c \in \mathbb{R}; \vec{u}, \vec{v} \in H$
-$c \vec{u} \in H$, $\vec{u} + \vec{v} \in H$
-
-when c = 0 then $\vec{0} \in H$
-
-Columnspace
+- $c \in \mathbb{R}; \vec{u}, \vec{v} \in H$
+- $c \vec{u} \in H$, $\vec{u} + \vec{v} \in H$
+-  $\vec{0} \in H$
+### Columnspace
 span of columns of A
 same as range of A
-
-Nullspace
+### Nullspace
 span of set of $\vec{x}$ that satisfy $A\vec{x} = \vec{0}$
 Null $A = \{\vec{x} | A\vec{x} = \vec{0}\}$
-
-Basis
+### Basis
 Linearly independent vectors that span a subspace
-
-# Coordinates, relative to a basis
+## Coordinates, relative to a basis
 There are many different possible choice of basis for a subspace. Our choice can give us dramatically different properties.
 
 Standard basis are i, j, k, but you can use other vectors to span the same amount of space if you want.
 
-Qs: 
-1. What is a determinant? Given a linear transformation T, let us focus on the magnitude of the cross product of the basis vectors. The determinant would be the scalar factor between the original and transformed areas?
-2. If you are calculating some integral over a transformed space, is the jacobian just the determinant of the transformation, or is it related---possibly scaling the result to make sense given standard basis vectors?
+1. What is a determinant? Given a linear transformation T, let us focus on the magnitude of the cross product of the basis vectors. The determinant would be the scalar factor between the original and transformed areas? (Yes)
+2. If you are calculating some integral over a transformed space, is the jacobian just the determinant of the transformation, or is it related---possibly scaling the result to make sense given standard basis vectors? (Yes)
 
 ## Dimension
 Dimension/Cardinality of a non-zero subspace H, dim H, is the number of vectors in the basis of H. We define dim{0} = 0.
 
 Theorem
-*Any two choices of $\mathcal{B}_1$, $\mathcal{B}_2$ of a non-zero subspace H have the same dimension*
+> Any two choices of $\mathcal{B}_1$, $\mathcal{B}_2$ of a non-zero subspace H have the same dimension*
+
+Ex Problems
 1. dim $\mathbb{R}^n$
 	1. n
 2. H = $\{(x_1 ...., x_n) : x_1 + ... + x_n = 0\}$ has dimension
@@ -586,48 +583,67 @@ Theorem
 	2. use the idea of # 3
 	3. n variables, solve for $x_1$ ito everything else. -> one pivot everything else free vars. Therefore n - 1 free vars
 3. dim(Null A) is the number of 
-	1. # of free vars
+	1. number of free vars
 4. dim(Col A) is the number of 
-	1. # of pivots
+	1. number of pivots
 
 ## Rank
 the rank of a matrix A is the dimension of its column space
-
-![[Pasted image 20240923104520.png|400]]
+number of pivots
 ## Nullity
 dim(Null A) = Nullity
-
+number of of free vars
+#### Notation from class
+- Let $\mathcal{B} \in H$
+	- $\mathcal{B} = \{\vec{b_1}, ..., \vec{b_n}\}$
+	- $\mathcal{B}$ is some basis for the subspace $H$
+$$
+\displaylines{
+\vec{x} \in H \implies \\
+\text{coords of $\vec{x}$ relative to $\mathcal{B}$ are $c_1, . . . , c_n$}\quad \vec{x} = c_1 \vec{b_1} + ... + c_n \vec{b_n}\quad\\ \\ \land \\
+\text{coord vector of } \vec{x} \text{ relative to } \mathcal{B}\quad [\vec{x}]_{\mathcal{B}} = \begin{bmatrix}
+c_1 \\
+... \\
+c_n
+\end{bmatrix}
+}
+$$
+![[Pasted image 20240923104520.png|400]]
 ## Rank-Nullity Theorem $\star$
-If a mtrix A has n columns, then Rank A + dim Nul A = n
-
+If a matrix A has n columns, then 
+> $Rank(A) + Nullity(A) = n$
+> $dim(Col(A)) + dim(Nul(A)) = n$
 ## Basis Theorem
-Any two bases for a subspace have the same dimension
-
+> Any two bases for a subspace have the same dimension
 ## Invertibility Theorem
-Let A be a n x n matrix. These conditions are equivalent.
-1. A is invertible
-2. The columns of A are a basis for $\mathbb{R}^n$
-3. Col A = $\mathbb{R}^n$
-4. rank A = dim Col A = n
-5. Null A = {0}
-
-
+> Let A be a n x n matrix. These conditions are equivalent.
+> 1. A is invertible
+> 2. The columns of A are a basis for $\mathbb{R}^n$
+> 3. Col A = $\mathbb{R}^n$
+> 4. rank A = dim Col A = n
+> 5. Null A = {0}
 # Determinant
 Imagine the area of parallelogram created by the basis of a standard vector space, like $\mathbb{R}^2$. Now apply a linear transformation $A$ to that vector space. The new area of the new parallelogram has been scaled by a factor of the determinant.
-$S$ is the parallelopiped. $$volume(T(S)) = |det(A)| \cdot volume(S)$$
+$S$ is the parallelopiped. $$area(T(S)) = |det(A)| \cdot area(S)$$
 You can also just think of it as the area of the parallelogram spanned by the columns of a matrix
 R^3 and beyond -> parallelopiped and volume
 (assume n by n matrix because we only know how to find determinants for square matrices)
 
-If det = 0 A is noninvertible
-
-det Triangular = product of diagonals
-
+You can also get the area of S by using the determinant of the matrix created by the vectors that span S, i.e.
+$|\vec{a} \times \vec{b}| = area(S) \implies |det([\vec{a}\ \ \vec{b}])| = area(S)$
+because you are shifting the standard basis vectors into the vector space dictated by S
+### Determinant Laws
+- det(A) = 0 $\iff$ A is singular
+	- det(A) $\not =$ 0 $\iff$ A is invertible
+- det(Triangular) = product of diagonals
+- det A = det $A^T$ 
+- det(AB) = det A · det B
+- $det(A^{-1}) = \frac{1}{det(A)}$
+## Determinant Post Row Operations
 if A square:
-* if adding rows to rows on A to get B then det A = det B
-* if swapping rows in A to get B then det A = -det B
-* if scaling one row of A by k, then det B = k det A
-
+* if adding rows to rows on A to get B then $det A = det B$
+* if swapping rows in A to get B then $-det A = det B$
+* if scaling one row of A by k, then $k \cdot det(A)$ = $det(B)$
 ## Cofactor expansion
 What the diagonal 3x3 is shorthand for
 Cofactor of an n x n matrix A is $C_{ij} = (-1)^{i+j} det A_{ij}$
@@ -639,77 +655,6 @@ $$\begin{bmatrix}
 \end{bmatrix}$$
 det A = $a_{1j}C_{1j} + ... + a_{nj} C_{nj}$
 For +/- use pattern of current matrix in Q, not the og
-
-det A = det A^T .
-A is invertible if and only if det A 6 = 0.
-det(AB) = det A · det B
-det(A^-1) = 1/det(A)
-
-# Markov chains
-Matrix that uses the rates/probabilities: stochastic matrix
-![[Pasted image 20241002094128.png]]
-Columns are probability vectors.
-Sum to 1
-#### Probability Vector
-Some vector $\vec{x}$ with nonnegative elements that sum to 1
-#### Stochastic Matrix
-A stochastic matrix is a square matrix, P , whose columns are
-probability vectors.
-|det (P)| <= 1, only volume contracting or preserving
-#### Markov Chain
-A Markov chain is a sequence of probability vectors ~x k , and a
-stochastic matrix P , such that:
- $$P^k \vec{x_0} = \vec{x}_k$$$$\vec{x}_{k+1} = P \vec{x}_k ; k = 0, 1, 2, . . .$$
-#### Steady-State Vector
-A steady-state vector for P is a vector $\vec{q}$ such that $P \vec{q} = \vec{q}$.
-$(P-I)\vec{q} = 0$
-Fixed point, I/O the same
-
-
-Ex:
-Determine the steady state vector for $$P = \begin{bmatrix}
-.8 & .3 \\
-.2 & .7
-\end{bmatrix}$$
-Goal: solve $P\vec{q} = \vec{q}$
-$(P-I)\vec{q} = \vec{q}$
-$$\begin{bmatrix}
-.8-1 & .3 & 0 \\
-.2 & .7-1 & 0
-\end{bmatrix}$$
-$$\begin{bmatrix}
--.2 & .3 & 0 \\
-.2 & -.3 & 0
-\end{bmatrix}$$ ~
-$$\begin{bmatrix}
-1 & -\frac{3}{2} & 0 \\
-0 & 0 & 0
-\end{bmatrix}$$
-$$\therefore \vec{q} = t\begin{bmatrix}
-\frac{3}{2} \\
-1
-\end{bmatrix}$$
-$$\frac{3}{2}t + t = 1$$
-$$\therefore t = \begin{bmatrix}
-\frac{3}{5} \\
-\frac{2}{5}
-\end{bmatrix}$$
-# Convergence
-#### Regularity
-- Stochastic matrix is regular if there  $\exists (k \geq 1) P^k$ strictly has positive entries
-- Regular $\iff$ unique steady state vectors
-	- Irregular $\iff$ $0\leq n\not = 1$ steady state vectors
-Related to eigenvectors. $\vec{q}$ is defined as $lim_{k\rightarrow \infty} \left(P^k \vec{x_0}\right) = \vec{q}$, also $P\vec{q} = \vec{q}$
-When you reapply a linear transformation approaching infinity times, all the points in the subspace will approach the span of
-1. If the transformation is regular, a single eigenvector
-	1. For our regular stochastic matrices, this is what the steady state vector is.
-2. If the transformation is irregular, possibly multiple eigenvectors or none at all. If multiple, points will converge to the closest possible eigenspace.
-
-Theorem
-> as k -> $\infty$
-> $$\vec{x}_{k+1} = P \vec{x}_k ; k = 0, 1, 2, . . .$$
-> 
-> If $P$ is a regular stochastic matrix, then $P$ has a unique steady-state vector $\vec{q}$, and $\vec{x_{k+1}} = P\vec{x_k}$ converges to $\vec{q}$ as $k \rightarrow \infty$; $(P^k \vec{x_0} \longrightarrow_{k\rightarrow \infty} \vec{q})$ where $P\vec{q} = \vec{q}$
 
 # Eigenvectors, Eigenvalues, and Eigenspaces
 ### Eigenvectors and Eigenvalues
@@ -733,7 +678,7 @@ Notes:
 - $\lambda > 0 \implies A\vec{v}, \vec{v}$ point same direction
 - $\lambda < 0 \implies A\vec{v}, \vec{v}$ point opposite direction
 - $\lambda$ can be complex even if nothing else in the equation is
-- ***Eigenvalues cannot be determined from the reduced version of a matrix***
+- ***Eigenvalues cannot be determined from the reduced version of a matrix*** #star
 	- i.e. row reductions change the eigenvalues of a matrix
 - The diagonal elements of a triangular matrix are its eigenvalues.
 - A invertible iff 0 is not an eigenvalue of A.
@@ -744,15 +689,16 @@ Notes:
 - $Nul(A-\lambda I)$
 
 # Characteristic Equation
-Also $det(A-\lambda I) = 0$ to get values for $\lambda$. Recall $det(T)=0$ means noninvertible. If a matrix isn't invertible, then we won't get trivial solutions when solving. Also the idea of reducing the dimension through the transformation is relevant; squishing the basis vectors all onto the same span where the area/volume is 0. Recall eigenvectors remain on the same span despite a linear transformation.
+$det(A-\lambda I) = 0$ to get values for $\lambda$. Recall $det(T)=0$ means noninvertible. If a matrix isn't invertible, then we won't get trivial solutions when solving. Also the idea of reducing the dimension through the transformation is relevant; squishing the basis vectors all onto the same span where the area/volume is 0. Recall eigenvectors remain on the same span despite a linear transformation.
 
-$\lambda$ is an eigenvalue of A $\iff$ $(A-\lambda I)$ is not invertible
+$\lambda$ is an eigenvalue of A $\iff$ $(A-\lambda I)$ is singular
 
 trace of a Matrix $tr(M)$ is the sum of diagonal
 
 ### Characteristic Polynomial
 $det(A-\lambda I)$
 n degree polynomial -> n roots -> maximum n eigenvalues (could be repeated)
+![[Pasted image 20241007112930.png|400]]
 
 ### Algebraic Multiplicity
 Algebraic multiplicity of an eigenvalue is how many times an eigenvalue repeatedly occurs as the root of the characteristic polynomial.
@@ -763,3 +709,79 @@ Geometric multiplicity of an eigenvalue is the number of eigenvectors associated
 ## Similarity
 1. square A,B are similar $\iff$ we can find P so that $A = PBP^{-1}$
 2. A,B similar $\implies$ same characteristic polynomial $\implies$ same eigenvalues
+# Markov chains
+Stochastic matrix
+- Matrix that uses the rates/probabilities
+- Columns are probability vectors.
+- Sum to 1
+![[Pasted image 20241002094128.png|500]]
+
+#### Probability Vector
+Some vector $\vec{x}$ with nonnegative elements that sum to 1
+#### Stochastic Matrix
+A stochastic matrix is a square matrix, P , whose columns are
+probability vectors.
+|det(P)| <= 1, only volume contracting or preserving
+#### Markov Chain
+A Markov chain is a sequence of probability vectors, and a
+stochastic matrix P , such that:
+ $$
+ \displaylines{
+ P^k \vec{x_0} = \vec{x}_k\\
+ \vec{x}_{k+1} = P \vec{x}_k ; k = 0, 1, 2, . . .
+ }
+ $$
+# Convergence
+#### Regularity
+- Stochastic matrix is regular if there  $\exists (k \geq 1) P^k$ strictly has positive entries
+- Regular $\iff$ unique steady state vectors
+	- Irregular $\iff$ $0\leq n\not = 1$ steady state vectors
+#### Steady-State Vector
+A steady-state vector for P is a vector $\vec{q}$ such that $P \vec{q} = \vec{q}$.
+$(P-I)\vec{q} = 0$
+Fixed point, I/O the same
+
+
+Ex:
+Determine the steady state vector for $$P = \begin{bmatrix}
+.8 & .3 \\
+.2 & .7
+\end{bmatrix}$$
+Goal: solve $P\vec{q} = \vec{q}$
+$(P-I)\vec{q} = \vec{q}$
+$$
+\displaylines{
+\begin{bmatrix}
+.8-1 & .3 & 0 \\
+.2 & .7-1 & 0
+\end{bmatrix}\\
+\begin{bmatrix}
+-.2 & .3 & 0 \\
+.2 & -.3 & 0
+\end{bmatrix}\\
+\begin{bmatrix}
+1 & -\frac{3}{2} & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+}
+$$
+$$\therefore \vec{q} = t\begin{bmatrix}
+\frac{3}{2} \\
+1
+\end{bmatrix}$$
+$$\frac{3}{2}t + t = 1$$
+$$\therefore t = \begin{bmatrix}
+\frac{3}{5} \\
+\frac{2}{5}
+\end{bmatrix}$$
+Related to eigenvectors. $\vec{q}$ is defined as $lim_{k\rightarrow \infty} \left(P^k \vec{x_0}\right) = \vec{q}$, also $P\vec{q} = \vec{q}$
+When you reapply a linear transformation approaching infinity times, all the points in the subspace will approach the span of
+1. If the transformation is regular, a single eigenvector
+	1. For our regular stochastic matrices, this is what the steady state vector is.
+2. If the transformation is irregular, possibly multiple eigenvectors or none at all. If multiple, points will converge to the closest possible eigenspace.
+
+Theorem
+> as k -> $\infty$
+> $$\vec{x}_{k+1} = P \vec{x}_k ; k = 0, 1, 2, . . .$$
+> 
+> If $P$ is a regular stochastic matrix, then $P$ has a unique steady-state vector $\vec{q}$, and $\vec{x_{k+1}} = P\vec{x_k}$ converges to $\vec{q}$ as $k \rightarrow \infty$; $(P^k \vec{x_0} \longrightarrow_{k\rightarrow \infty} \vec{q})$ where $P\vec{q} = \vec{q}$
