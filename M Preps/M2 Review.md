@@ -10,13 +10,20 @@
 		- [x] 5.1-2
 - [x] Complete all practice review sets
 	- [x] [Midterm 2 Lecture Review Activity](https://sbarone7.math.gatech.edu/M2ReviewActivity.pdf)
-- [ ] Complete all practice exams
-	- [ ] [sample exam set](https://gatech.instructure.com/courses/114544/pages/sample-exams)
-	- [ ] [M2B](https://sbarone7.math.gatech.edu/ma1554_exam2_reviewB.pdf)
-	- [ ] [M2A](https://sbarone7.math.gatech.edu/ma1554_exam2_reviewA.pdf)
-	- [ ] [Spring 2017 M2](https://sbarone7.math.gatech.edu/ma1553s_exam2.pdf)
-- [ ] Additional Problems
+- [ ] Practice Problems
 	- [ ] [Additional Problems for Midterm 2 Review (1553)](https://sbarone7.math.gatech.edu/ma1553s_exam2_review.pdf)
 	- [ ] [Additional Review Set for Midterm 2 (1554)](https://sbarone7.math.gatech.edu/ma1554_exam2_additional.pdf)
 	- [ ] [M2 Review WW ](https://gatech.instructure.com/courses/405572/assignments/1819970)
 	- [ ] Old WW Problems
+- [ ] Complete practice exams
+	- [ ] [sample exam set](https://gatech.instructure.com/courses/114544/pages/sample-exams)
+		- [ ] [Exam 2 s22](https://gatech.instructure.com/courses/114544/files/39493531?wrap=1 "ma1554s22_exam2.pdf")
+		- [ ] [Exam 2 f22](https://gatech.instructure.com/courses/114544/files/49393993?wrap=1 "ma1554f22_exam2b.pdf")
+		- [ ] [Exam 2 s23](https://gatech.instructure.com/courses/114544/files/40970959?wrap=1 "ma1554s23_exam2.pdf")
+		- [ ] [Exam 2A f23](https://gatech.instructure.com/courses/114544/files/45399615?wrap=1 "ma1554f23_exam2A.pdf")
+		- [ ] [Exam 2B f23](https://gatech.instructure.com/courses/114544/files/45399611?wrap=1 "ma1554f23_exam2B.pdf")
+		- [ ] [Exam 2A s24](https://gatech.instructure.com/courses/114544/files/49663151?wrap=1 "ma1554s24_exam2A.pdf")
+		- [ ] [Exam 2B s24](https://gatech.instructure.com/courses/114544/files/49663149?wrap=1 "ma1554s24_exam2B.pdf")
+		- [ ] [Sample M2B](https://sbarone7.math.gatech.edu/ma1554_exam2_reviewB.pdf)
+		- [ ] [Sample M2A](https://sbarone7.math.gatech.edu/ma1554_exam2_reviewA.pdf)
+		- [ ] [Spring 2017 M2](https://sbarone7.math.gatech.edu/ma1553s_exam2.pdf)
