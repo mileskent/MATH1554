@@ -627,6 +627,7 @@ Imagine the area of parallelogram created by the basis of a standard vector spac
 $S$ is the parallelopiped. $$area(T(S)) = |det(A)| \cdot area(S)$$
 You can also just think of it as the area of the parallelogram spanned by the columns of a matrix
 R^3 and beyond -> parallelopiped and volume
+#star
 (assume n by n matrix because we only know how to find determinants for square matrices)
 
 You can also get the area of S by using the determinant of the matrix created by the vectors that span S, i.e.
@@ -639,11 +640,13 @@ because you are shifting the standard basis vectors into the vector space dictat
 - det A = det $A^T$ 
 - det(AB) = det A · det B
 - $det(A^{-1}) = \frac{1}{det(A)}$
+- $det(kA) = k^n det(A)$
 ## Determinant Post Row Operations
 if A square:
 * if adding rows to rows on A to get B then $det A = det B$
 * if swapping rows in A to get B then $-det A = det B$
 * if scaling one row of A by k, then $k \cdot det(A)$ = $det(B)$
+Exactly the same for columns
 ## Cofactor expansion
 What the diagonal 3x3 is shorthand for
 Cofactor of an n x n matrix A is $C_{ij} = (-1)^{i+j} det A_{ij}$

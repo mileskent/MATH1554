@@ -11,7 +11,7 @@
 - [x] Complete all practice review sets
 	- [x] [Midterm 2 Lecture Review Activity](https://sbarone7.math.gatech.edu/M2ReviewActivity.pdf)
 - [ ] Practice Problems
-	- [ ] [Additional Problems for Midterm 2 Review (1553)](https://sbarone7.math.gatech.edu/ma1553s_exam2_review.pdf)
+	- [x] [Additional Problems for Midterm 2 Review (1553)](https://sbarone7.math.gatech.edu/ma1553s_exam2_review.pdf)
 	- [ ] [Additional Review Set for Midterm 2 (1554)](https://sbarone7.math.gatech.edu/ma1554_exam2_additional.pdf)
 	- [ ] [M2 Review WW ](https://gatech.instructure.com/courses/405572/assignments/1819970)
 	- [ ] Old WW Problems
