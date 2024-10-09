@@ -10,13 +10,18 @@
 		- [x] 5.1-2
 - [x] Complete all practice review sets
 	- [x] [Midterm 2 Lecture Review Activity](https://sbarone7.math.gatech.edu/M2ReviewActivity.pdf)
-- [ ] Complete all practice exams
-	- [ ] [sample exam set](https://gatech.instructure.com/courses/114544/pages/sample-exams)
-	- [ ] [M2B](https://sbarone7.math.gatech.edu/ma1554_exam2_reviewB.pdf)
-	- [ ] [M2A](https://sbarone7.math.gatech.edu/ma1554_exam2_reviewA.pdf)
-	- [ ] [Spring 2017 M2](https://sbarone7.math.gatech.edu/ma1553s_exam2.pdf)
+- [x] Complete practice exams
+	- [x] [M2A](https://sbarone7.math.gatech.edu/ma1554_exam2_reviewA.pdf)
+	- [x] [M2B](https://sbarone7.math.gatech.edu/ma1554_exam2_reviewB.pdf)
+	- [x] [sample exam set (these actually have answer keys)](https://gatech.instructure.com/courses/114544/pages/sample-exams)
 - [ ] Additional Problems
-	- [ ] [Additional Problems for Midterm 2 Review (1553)](https://sbarone7.math.gatech.edu/ma1553s_exam2_review.pdf)
+	- [x] [Additional Problems for Midterm 2 Review (1553)](https://sbarone7.math.gatech.edu/ma1553s_exam2_review.pdf)
 	- [ ] [Additional Review Set for Midterm 2 (1554)](https://sbarone7.math.gatech.edu/ma1554_exam2_additional.pdf)
+		- [x] 1
+		- [ ] 2
+		- [ ] 3
+		- [ ] 4
+		- [ ] 5
+		- [ ] 6
 	- [ ] [M2 Review WW ](https://gatech.instructure.com/courses/405572/assignments/1819970)
 	- [ ] Old WW Problems
