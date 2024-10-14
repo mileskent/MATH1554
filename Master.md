@@ -828,4 +828,46 @@ THEN
 - $A$ is diagonalizable $\iff$ the eigenvectors, for all eigenvalues, together form a basis for $\mathbb{R}^n$
 
 #### Basis of Eigenvectors
-...
+$$\displaylines{
+\text{Express the vector $\vec{x}_0 =$}
+\begin{bmatrix}
+4 \\
+5
+\end{bmatrix}
+\text{ as a linear combination of the vectors }\\
+\vec{v}_1 = \begin{bmatrix}
+1 \\
+1
+\end{bmatrix}
+\text{ and }
+\vec{v_2} =\begin{bmatrix}
+1 \\
+-1
+\end{bmatrix}
+\text{ and find the coordinates of } \vec{x_0} \text{ in the basis}\\
+\mathcal{B} = \{\vec{v_1}, \vec{v_2}\}\\
+\\
+[\vec{x_0}]_{\mathcal{B}} = ?\quad\quad\quad
+[\vec{x_0}]_{\mathcal{B}} = \begin{bmatrix}
+4.5 \\
+-0.5
+\end{bmatrix}\\
+\\
+\sim \\
+\\
+\text{Let } P = [\vec{v_1}\ \vec{v_2}],\ D = \begin{bmatrix}
+1 & 0 \\
+0 & -1
+\end{bmatrix}\\
+\\
+[A^k\ \vec{x}_0]_{\mathcal{B}} =\ ? \quad\quad\text{where } A = PDP^{-1},\ k\in \mathbb{Z}^{+}\\
+\\
+A^k = PD^k P^{-1} = [\vec{v_1}\ \vec{v_2}]
+\begin{bmatrix}
+ 1^k &  \\
+ & (-1)^k
+\end{bmatrix}  
+[\vec{v_1}\ \vec{v_2}]^{-1}\\
+[A^k\ \vec{x}_0]_{\mathcal{B}} =\ ?
+}$$
+#todo
