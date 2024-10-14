@@ -788,3 +788,44 @@ Theorem
 > $$\vec{x}_{k+1} = P \vec{x}_k ; k = 0, 1, 2, . . .$$
 > 
 > If $P$ is a regular stochastic matrix, then $P$ has a unique steady-state vector $\vec{q}$, and $\vec{x_{k+1}} = P\vec{x_k}$ converges to $\vec{q}$ as $k \rightarrow \infty$; $(P^k \vec{x_0} \longrightarrow_{k\rightarrow \infty} \vec{q})$ where $P\vec{q} = \vec{q}$
+
+
+# Diagonalization
+
+#### Diagonal Matrix
+A matrix is **diagonal** if the only non-zero elements, if any, are on the main diagonal.
+- If $A$ is diagonal, then $A^k$ is very easy to compute because you simply exponentiate every diagonal element by $k$
+
+## Diagonalizable
+$A \in \mathbb{R}^{n \times n} \land A = PDP^{-1} \implies A$ is diagonalizable, where $D$ is a diagonal matrix
+
+$A$ is diagonalizable $\iff$ $A$ has $n$ linearly independent eigenvectors.
+i.e.
+$$\displaylines{
+A = PDP^{-1}\\ \iff \\ A = [\vec{v_1}, ..., \vec{v_n}] 
+\begin{bmatrix}
+\lambda_1 &  &  \\
+ & ... &  \\
+ &  & \lambda_n
+\end{bmatrix}
+[\vec{v_1}, ..., \vec{v_n}]^{-1}
+}
+$$
+where $\vec{v}$ vectors are linearly independent eigenvectors, and $\lambda_1, ..., \lambda_n$ are the corresponding eigenvalues, in order.
+
+#### Distinct Eigenvalues
+If $A \in \mathbb{R}^{n \times n}$ and has $n$ distinct eigenvalues, then $A$ is diagonalizable
+
+#### Non-distinct Eigenvalues
+IF
+- $A$ is $n \times n$
+- $A$ has distinct eigenvalues $\lambda_1, ..., \lambda_k$, $k \leq n$
+- $a_i$ = algebraic multiplicity of $\lambda_i$
+- $d_i$ = dimension of $\lambda_i$ eigenspace ("geometric multiplicity")
+THEN
+- $d_i \leq a_i$ for all $i$
+- $A$ is diagonalizable $\iff \sum d_i = n \iff d_i = a_i$ for all $i$
+- $A$ is diagonalizable $\iff$ the eigenvectors, for all eigenvalues, together form a basis for $\mathbb{R}^n$
+
+#### Basis of Eigenvectors
+...
