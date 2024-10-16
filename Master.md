@@ -902,3 +902,86 @@ $$\displaylines{
 d(A) \land i(A) \iff d(A^{-1})\land i(A^{-1})
 }
 $$
+
+# Complex Eigenvalues
+### Complex numbers
+Conjugate $\overline{a + bi} = a - bi$
+- Reflects across the $Re(z)$ axis
+Magnitude (or "Modulus") $|a + bi| = \sqrt{a^2 + b^2} = \sqrt{(a+bi)(a-bi)}$
+Polar $a+ib = r(cos\phi + i\ sin\phi)$ where $r$ is the magnitude
+
+if x and y $\in \mathbb{C}$, $\vec{v} \in \mathbb{C}^n$
+- $\overline{(x+y)} = \overline{x} + \overline{y}$
+- $\overline{A\vec{v}} = A \overline{\vec{v}}$
+- $Im(x\overline{x}) = 0$
+- $\overline{(xy)} = \overline{x} \overline{y}$
+
+### Euler's Formula
+$z = |z|e^{i\phi}$
+
+Suppose $z_1$ has an angle $\phi_1$ and $z_2$ has $\phi_2$
+The product $z_1 z_2$ has angle $\phi_1 + \phi_2$, and modulus $|z_1||z_2|$
+Can use Euler's formula to make it easier
+$z_1 z_2 = (|z_1|e^{i\phi_1})(|z_2|e^{i\phi_2}) = (|z_1||z_2|e^{i(\phi_1 + \phi_2)})$
+
+### Complex Eigenvalues
+Theorem: Fundamental Theorem of Algebra
+An $n$ degree polynomial has exactly $n$ complex roots (including multiplicity).
+
+Theorem
+- If $\lambda \in \mathbb{C}$ is a root of a real polynomial, $\overline{\lambda}$ is also
+	- Complex roots come in complex conjugate pairs
+- If $\lambda$ is an eigenvalue of real matrix $A$, with eigenvector $\vec{v}$, then $\overline{\lambda}$ is an eigenvalue of A with eigenvector $\overline{\vec{v}}$
+
+#### Example
+4 of the eigenvalues of a 7 x 7 matrix are -2, 4 + i, -4 - i, and i
+- Because there are 3 nonconjugate complex pairs, we know that the remaining eigenvalues are the conjugates of the given complex values
+- What is the characteristic polynomial?
+- $p(\lambda) = (\lambda + 2)(\lambda - (4+i))(\lambda - (-4-i))(\lambda - i) (\lambda-(4-i))(\lambda - (-4 + i))(\lambda + i)$ 
+#### Example
+The matrix that rotates vectors by $\frac{\pi}{4}$ radians about the origin and then scales vectors by $\sqrt{2}$ is:
+$$\begin{bmatrix}
+1 & -1 \\
+1 & 1
+\end{bmatrix}$$
+What are the eigenvalues of $A$? Find an eigenvector for each eigenvalue
+
+$det(A - \lambda I) = (1 - \lambda)^2 = \lambda^2 - 2\lambda +2$
+$\lambda = \frac{2 \pm \sqrt{4 - 8}}{2} = \frac{2 \pm 2i}{2} = 1 \pm i$
+$\lambda^{+}$:
+$$\displaylines{
+A - \lambda^{+} I\\
+\begin{bmatrix}
+1-(1+i) & -1 \\
+1 & 1-(1+i)
+\end{bmatrix}
+\\
+\begin{bmatrix}
+-i & -1 \\
+1 & -i
+\end{bmatrix}
+\\
+\begin{bmatrix}
+1 & -i\\
+-i & -1
+\end{bmatrix}
+\\
+\begin{bmatrix}
+1 & -i\\
+0 & 0
+\end{bmatrix} \rightarrow \vec{v_{+}} = \begin{bmatrix}
+i \\
+1
+\end{bmatrix}
+}
+$$
+
+$\lambda^{-}$:
+$$\displaylines{
+""""""\rightarrow \vec{v_{-}} = \begin{bmatrix}
+-i \\
+1
+\end{bmatrix}
+}
+$$
+Could reason the eigenvalue for $\lambda^{-}$ by the fact that eigenvalues and their eigenvectors come in complex conjugate pairs.
