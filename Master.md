@@ -789,13 +789,14 @@ Theorem
 > 
 > If $P$ is a regular stochastic matrix, then $P$ has a unique steady-state vector $\vec{q}$, and $\vec{x_{k+1}} = P\vec{x_k}$ converges to $\vec{q}$ as $k \rightarrow \infty$; $(P^k \vec{x_0} \longrightarrow_{k\rightarrow \infty} \vec{q})$ where $P\vec{q} = \vec{q}$
 
-
+# M3
 # Diagonalization
 
 #### Diagonal Matrix
 A matrix is **diagonal** if the only non-zero elements, if any, are on the main diagonal.
 - If $A$ is diagonal, then $A^k$ is very easy to compute because you simply exponentiate every diagonal element by $k$
 
+Diagonal matrices cannot have $\lambda = 0$
 #### Strang
 Consider a matrix $A$ with some eigenvalues and eigenvectors.
 $A\vec{v_0} = \lambda_0 \vec{v_0}$
