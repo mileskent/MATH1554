@@ -986,3 +986,29 @@ $$\displaylines{
 }
 $$
 Could reason the eigenvalue for $\lambda^{-}$ by the fact that eigenvalues and their eigenvectors come in complex conjugate pairs.
+
+# Inner Product, Length, Orthogonality
+### Dot Product
+- $\vec{u} \cdot \vec{v} = \vec{u}^{T} \vec{v}$
+- $\vec{u} \cdot \vec{v} = \vec{v} \cdot \vec{u}$
+- $(\vec{u} + \vec{v}) \cdot \vec{w} = \vec{u} \cdot \vec{w} + \vec{v} \cdot \vec{w}$
+- $(c\vec{u}) \cdot \vec{v} = c(\vec{u} \cdot \vec{w})$
+- $||c\vec{v}|| = |c|\ ||\vec{v}||$
+- $\vec{u} \cdot \vec{u} \geq 0$
+- $\vec{u} \cdot \vec{u} = ||\vec{u}||^2$
+### Length
+$||\vec{u}|| = \sqrt{\vec{u} \cdot \vec{u}} = \sqrt{u^{2}_{1} + \cdots + u^{2}_n}$
+### Orthogonality
+- $||\vec{u} + \vec{w}||^2 = ||\vec{u}||^2 + ||\vec{w}||^2 \lor \vec{u} \cdot \vec{w} = 0 \implies \text{Orthogonal}$
+- If $W$ is a subspace of $\mathbb{R}^n$ and $\vec{z} \in \mathbb{R}^n$, $\vec{z}$ is orthogonal to $W$ if it is orthogonal to every vector in $W$
+- The set of all vectors orthogonal to a subspace is a itself a subspace, called the **orthogonal compliment** of $W$, $W^{\perp}$, W perp
+	- $W^{\perp} = \{\vec{z} \in \mathbb{R}^n \mid \forall (\vec{w} \in W)\ \vec{z} \cdot \vec{w} = 0\}$
+- $dim(Row\ A) = dim(Col\ A)$
+- $(Row\ A)^{\perp} = Nul\ A$
+- $(Col\ A)^{\perp} = Nul (A^T)$
+
+$\vec{x} \in Nul(A) \iff$
+- $A\vec{x} = \vec{0}$
+- $\vec{x}$ is orthogonal to each row of $A$
+- $Row\ A$ is orthogonal complement to $Nul\ A$
+- $dim(Row\ A) + dim(Nul\ A) =$ number of columns
