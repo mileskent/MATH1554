@@ -1,4 +1,3 @@
-#todo For whole thing, need to modularize with definition and such
 [Barone Website](https://sbarone7.math.gatech.edu/ma1554s24.html)
 [Master Website](https://gatech.instructure.com/courses/114544)
 # Systems of Linear Equations
@@ -996,6 +995,7 @@ Could reason the eigenvalue for $\lambda^{-}$ by the fact that eigenvalues and t
 - $||c\vec{v}|| = |c|\ ||\vec{v}||$
 - $\vec{u} \cdot \vec{u} \geq 0$
 - $\vec{u} \cdot \vec{u} = ||\vec{u}||^2$
+- $\vec{a} \cdot \vec{b} = |a||b|\ cos\theta$
 ### Length
 $||\vec{u}|| = \sqrt{\vec{u} \cdot \vec{u}} = \sqrt{u^{2}_{1} + \cdots + u^{2}_n}$
 ### Orthogonality
@@ -1012,3 +1012,30 @@ $\vec{x} \in Nul(A) \iff$
 - $\vec{x}$ is orthogonal to each row of $A$
 - $Row\ A$ is orthogonal complement to $Nul\ A$
 - $dim(Row\ A) + dim(Nul\ A) =$ number of columns
+
+$\vec{a} \cdot \vec{b} = 0 \land \vec{a} \not = \vec{0}, \vec{b} \not = 0 \iff \vec{a} \perp \vec{b} \iff a \text{ and } b \text{ are Orthogonal}$
+
+# Orthogonal Sets
+### Orthogonal Vector Sets
+A set of vectors are an **orthogonal set** of vectors if every pair in the set is orthogonal to every other vector in the set.
+
+**Linear Independence for Orthogonal Sets:**
+If there is an orthogonal set of vectors $O$, then
+$$||c_0 \cdot \vec{u}_0 + \cdots  + c_n \cdot \vec{u}_n||^2 = c_0^2 \cdot ||\vec{u}_0||^2 + \cdots + c_n^2 \cdot ||\vec{u}_n||^2$$
+$\vec{0} \not \in O \implies O$ lin. indep.
+
+**Expansion in Orthogonal Basis**
+If $O$ is the basis for subspace $W$ in $\mathbb{R}^n$ and $O$ is an orthogonal basis,
+then for any vector $\vec{w} \in W$
+$$\vec{w} = c_0 \vec{u}_0 + \cdots + c_n \vec{u}_n$$
+$$c_i=\frac{\vec{w} \cdot \vec{u}_i}{\vec{u}_i \cdot \vec{u}_i}$$
+
+## Orthogonal Projections
+$$\displaylines{
+\text{proj}_{\vec{u}} \vec{v} = \frac{\vec{v} \cdot \vec{u}}{\vec{u} \cdot \vec{u}}\vec{u}\\
+\vec{w} = \vec{v} - \text{proj}_{\vec{u}}\vec{v}\quad \quad
+\vec{v} = \vec{w} + \text{proj}_{\vec{u}}\vec{v}\quad \quad
+||\vec{v}||^2 = ||\vec{w}||^2 + ||\text{proj}_{\vec{u}}\vec{v}||^2
+}
+$$
+
