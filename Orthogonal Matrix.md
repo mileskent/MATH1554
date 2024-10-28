@@ -2,8 +2,8 @@
 A square matrix whose columns are [[Orthonormal]]
 
 $U$ is orthogonal $\iff U^T U = I_n$ 
-- $U^T U = I_n \implies U\in \mathbb{R}^{n\times n}$
 
+$Q^T = Q^{-1}$
 ### Properties
 ##### Preserves Length
 $||U\vec{x}|| = ||\vec{x}||$

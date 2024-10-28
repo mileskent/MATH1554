@@ -8,3 +8,5 @@ R is
 - upper triangular
 - positive diagonal
 - $||\vec{r}_j|| = ||\vec{a}_j||\quad \quad$ where $\vec{r}$ and $\vec{a}$ are columns of R and A
+
+![[IMG_4518D2310700-1.jpeg|500]]
