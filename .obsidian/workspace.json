@@ -11,10 +11,14 @@
             "id": "484f6d0d0930021a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Orthogonal Decomposition.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Orthogonal Decomposition"
             }
           }
         ]
@@ -162,15 +166,16 @@
   },
   "active": "484f6d0d0930021a",
   "lastOpenFiles": [
-    "QR Factorization.md",
+    "HW.md",
     "Orthogonal Decomposition.md",
+    "Orthogonal Matrix.md",
+    "QR Factorization.md",
     "Gram-Schmidt Process.md",
     "Pasted image 20241028145639.png",
     "Master.md",
     "Orthogonal Projection.md",
     "Orthogonal Basis.md",
     "Orthonormal Basis.md",
-    "Orthogonal Matrix.md",
     "Best Approximation.md",
     "Orthonormal.md",
     "Pasted image 20241028135920.png",
