@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "88ed8c89bf6c99eb",
+        "id": "ac6b6badbff608e7",
         "type": "tabs",
         "children": [
           {
-            "id": "28996b6407c396a7",
+            "id": "484f6d0d0930021a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Master.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Master"
+              "title": "New tab"
             }
           }
         ]
@@ -164,9 +160,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "28996b6407c396a7",
+  "active": "484f6d0d0930021a",
   "lastOpenFiles": [
+    "QR Factorization.md",
+    "Orthogonal Decomposition.md",
+    "Gram-Schmidt Process.md",
+    "Pasted image 20241028145639.png",
     "Master.md",
+    "Orthogonal Projection.md",
+    "Orthogonal Basis.md",
+    "Orthonormal Basis.md",
+    "Orthogonal Matrix.md",
+    "Best Approximation.md",
+    "Orthonormal.md",
+    "Pasted image 20241028135920.png",
+    "Orthogonal.md",
+    "Normal.md",
+    "Orthogonal Complement.md",
+    "orthogonal compliment.md",
     "M Preps/M2 Review.md",
     "M Preps",
     "Images/Pasted image 20241007112930.png",
@@ -178,8 +189,6 @@
     "Master.md~",
     "Images/augmented-matrix.png",
     "Images/Pasted image 20240923104520.png",
-    "Images/Pasted image 20240917100516.png",
-    "Images/Pasted image 20240826095038.png",
     "Images",
     "().md",
     "Welcome.md"

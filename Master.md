@@ -706,7 +706,7 @@ n degree polynomial -> n roots -> maximum n eigenvalues (could be repeated)
 Algebraic multiplicity of an eigenvalue is how many times an eigenvalue repeatedly occurs as the root of the characteristic polynomial.
 
 ### Geometric Multiplicity
-Geometric multiplicity of an eigenvalue is the number of eigenvectors associated with an eigenvalue; $dim(Nul(A-\lambda I))$, which is saying how many eigenvector solutions does this eigenvalue have (recall $dim(B)$ is number of free vars in $B$)
+- Geometric multiplicity of an eigenvalue is the number of eigenvectors associated with an eigenvalue; $dim(Nul(A-\lambda I))$, which is saying how many eigenvector solutions does this eigenvalue have (recall $dim(B)$ is number of free vars in $B$)
 
 ## Similarity
 1. square A,B are similar $\iff$ we can find P so that $A = PBP^{-1}$
@@ -1001,7 +1001,7 @@ $||\vec{u}|| = \sqrt{\vec{u} \cdot \vec{u}} = \sqrt{u^{2}_{1} + \cdots + u^{2}_n
 ### Orthogonality
 - $||\vec{u} + \vec{w}||^2 = ||\vec{u}||^2 + ||\vec{w}||^2 \lor \vec{u} \cdot \vec{w} = 0 \implies \text{Orthogonal}$
 - If $W$ is a subspace of $\mathbb{R}^n$ and $\vec{z} \in \mathbb{R}^n$, $\vec{z}$ is orthogonal to $W$ if it is orthogonal to every vector in $W$
-- The set of all vectors orthogonal to a subspace is a itself a subspace, called the **orthogonal compliment** of $W$, $W^{\perp}$, W perp
+- The set of all vectors orthogonal to a subspace is a itself a subspace, called the [[Orthogonal Complement]] of $W$, $W^{\perp}$, W perp
 	- $W^{\perp} = \{\vec{z} \in \mathbb{R}^n \mid \forall (\vec{w} \in W)\ \vec{z} \cdot \vec{w} = 0\}$
 - $dim(Row\ A) = dim(Col\ A)$
 - $(Row\ A)^{\perp} = Nul\ A$
@@ -1021,21 +1021,18 @@ A set of vectors are an **orthogonal set** of vectors if every pair in the set i
 
 **Linear Independence for Orthogonal Sets:**
 If there is an orthogonal set of vectors $O$, then
-$$||c_0 \cdot \vec{u}_0 + \cdots  + c_n \cdot \vec{u}_n||^2 = c_0^2 \cdot ||\vec{u}_0||^2 + \cdots + c_n^2 \cdot ||\vec{u}_n||^2$$
+$$||c_1 \cdot \vec{u}_1 + \cdots  + c_n \cdot \vec{u}_n||^2 = c_1^2 \cdot ||\vec{u}_1||^2 + \cdots + c_n^2 \cdot ||\vec{u}_n||^2$$
 $\vec{0} \not \in O \implies O$ lin. indep.
 
 **Expansion in Orthogonal Basis**
 If $O$ is the basis for subspace $W$ in $\mathbb{R}^n$ and $O$ is an orthogonal basis,
 then for any vector $\vec{w} \in W$
-$$\vec{w} = c_0 \vec{u}_0 + \cdots + c_n \vec{u}_n$$
+$$\vec{w} = c_1 \vec{u}_1 + \cdots + c_n \vec{u}_n$$
 $$c_i=\frac{\vec{w} \cdot \vec{u}_i}{\vec{u}_i \cdot \vec{u}_i}$$
 
-## Orthogonal Projections
-$$\displaylines{
-\text{proj}_{\vec{u}} \vec{v} = \frac{\vec{v} \cdot \vec{u}}{\vec{u} \cdot \vec{u}}\vec{u}\\
-\vec{w} = \vec{v} - \text{proj}_{\vec{u}}\vec{v}\quad \quad
-\vec{v} = \vec{w} + \text{proj}_{\vec{u}}\vec{v}\quad \quad
-||\vec{v}||^2 = ||\vec{w}||^2 + ||\text{proj}_{\vec{u}}\vec{v}||^2
-}
-$$
+## [[Orthogonal Projection]]
+## [[Orthogonal Decomposition]]
+## [[Best Approximation]]
+## [[Gram-Schmidt Process]]
+## [[QR Factorization]]
 

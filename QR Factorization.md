@@ -1,0 +1,10 @@
+For any $m \times n$ matrix $A$, with linearly independent columns:
+$$A = QR$$
+Q is
+- m x n
+- its columns are an orthonormal basis for Col A
+R is
+- n x n
+- upper triangular
+- positive diagonal
+- $||\vec{r}_j|| = ||\vec{a}_j||\quad \quad$ where $\vec{r}$ and $\vec{a}$ are columns of R and A
