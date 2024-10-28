@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "ac6b6badbff608e7",
+        "id": "181c71d6f429f9cb",
         "type": "tabs",
         "children": [
           {
@@ -166,8 +166,9 @@
   },
   "active": "484f6d0d0930021a",
   "lastOpenFiles": [
-    "HW.md",
     "Orthogonal Decomposition.md",
+    "Best Approximation.md",
+    "HW.md",
     "Orthogonal Matrix.md",
     "QR Factorization.md",
     "Gram-Schmidt Process.md",
@@ -176,7 +177,6 @@
     "Orthogonal Projection.md",
     "Orthogonal Basis.md",
     "Orthonormal Basis.md",
-    "Best Approximation.md",
     "Orthonormal.md",
     "Pasted image 20241028135920.png",
     "Orthogonal.md",
