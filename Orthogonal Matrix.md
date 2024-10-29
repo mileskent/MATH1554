@@ -1,9 +1,7 @@
-#potentialerror Strang and lecture notes have difference in definition. See calendar.
-A square matrix whose columns are [[Orthonormal]]
+A matrix whose columns are [[Orthonormal]]
 
 $U$ is orthogonal $\iff U^T U = I_n$ 
-
-$Q^T = Q^{-1}$
+$U \square \implies U^T = U^{-1}$ 
 ### Properties
 ##### Preserves Length
 $||U\vec{x}|| = ||\vec{x}||$
