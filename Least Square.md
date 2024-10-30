@@ -18,6 +18,9 @@ y_4 \\
 y_5
 \end{bmatrix}$$
 
+#q x vs xhat???
+p sure x is in the original equation and xhat is only for the final solution?
+
 Let A be a m x n matrix. A least squares solution to Ax = b is the solution $\hat{x}$ for which 
 $$\forall \vec{x} \in \mathbb{R}^n \quad\quad ||\vec{b} - A\hat{x}|| \leq ||\vec{b} - A \vec{x}||$$
 - minimize the difference b - Axhat
@@ -33,7 +36,7 @@ b is closer to Axhat than to Ax for all other x in Col A
 
 
 ### Normal Equations
-The least squares solutions to $A\{x} = \vec{b}$ correspond to the solution to 
+The least squares solutions to $A\vec{x} = \vec{b}$ corresponds to the solution to 
 $$A^T A\vec{x} = A^T \vec{b}$$
 - Turns the $A\vec{x} = \vec{b}$ equation from above and transforms it into a square matrix equation
 
@@ -50,6 +53,20 @@ $(Col A)^{\perp} - Null(A^T)$
 - Use when non-square matrix
 	- Over/Under determined
 - Regression
+
+### Theorem (Unique Solutions for Least Squares)
+If A is m x n
+- Ax = b has a unique least squares solution for each b in Rm
+- Cols of A are linearly independent
+- The matrix A^T A is invertible
+If the above hold, the least square solution is
+$$\hat{x} = (A^T A)^{-1} A^T \vec{b}$$
+Note: $A^T A$ plays the role of the "length squared" of the matrix A
+
+### Theorem (Least Squares and QR)
+Let m x n matrix A have a QR decomposition. Then for each b in Rm, the equation Ax = b has the unique least squares solution
+$$R\hat{x} = Q^T \vec{b}$$
+$R$ is upper triangular, so the equation above is solved by reverting it back to the system of equations
 
 ## Examples
 $$\displaylines{
@@ -72,17 +89,17 @@ A^T \vec{b} = \begin{bmatrix}
 11
 \end{bmatrix}\\
 \text{Now setup the Normal Equations:}\\
-A^T A \hat{x}= A^T \vec{b}\\
+A^T A \vec{x}= A^T \vec{b}\\
 
 \begin{bmatrix}
 17 & 1 \\
 1 & 8
-\end{bmatrix}\hat{x} = \begin{bmatrix}
+\end{bmatrix}\vec{x} = \begin{bmatrix}
 19 \\
 11
 \end{bmatrix}\\
 
-\hat{x} = \begin{bmatrix}
+\vec{x} = \begin{bmatrix}
 17 & 1 \\
 1 & 8
 \end{bmatrix}^{-1}
@@ -97,18 +114,3 @@ A^T A \hat{x}= A^T \vec{b}\\
 2
 \end{bmatrix}
 }$$
-#q Why does the normal equation solve for xhat but not have xhat in the equation
-### Theorem (Unique Solutions for Least Squares)
-If A is m x n
-- Ax = b has a unique least squares solution for each b in Rm
-- Cols of A are linearly independent
-- The matrix A^T A is invertible
-If the above hold, the least square solution is
-$$\hat{x} = (A^T A)^{-1} A^T \vec{b}$$
-Note: $A^T A$ plays the role of the "length squared" of the matrix A
-
-### Theorem (Least Squares and QR)
-Let m x n matrix A have a QR decomposition. Then for each b in Rm, the equation Ax = b has the unique least squares solution
-$$R\hat{x} = Q^T \vec{b}$$
-$R$ is upper triangular, so the equation above is solved by reverting it back to the system of equations
-
