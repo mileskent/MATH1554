@@ -1036,4 +1036,4 @@ $$c_i=\frac{\vec{w} \cdot \vec{u}_i}{\vec{u}_i \cdot \vec{u}_i}$$
 ## [[Gram-Schmidt Process]]
 ## [[QR Factorization]]
 
-# [[Least Square]]
+# [[Least Squares]]

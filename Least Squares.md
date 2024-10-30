@@ -114,3 +114,6 @@ A^T A \vec{x}= A^T \vec{b}\\
 2
 \end{bmatrix}
 }$$
+
+See also: [[LeastSquaresHW6_5.pdf]]
+
