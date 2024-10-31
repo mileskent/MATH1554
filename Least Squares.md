@@ -32,7 +32,7 @@ Use principles from [[Best Approximation]]
 b is closer to Axhat than to Ax for all other x in Col A
 - If b in Col A, then xhat is...
 - Seek $\hat{x}$ so that $A\hat{x}$ is as close to $\vec{b}$ as possible, i.e. $\hat{x}$ should solve Axhat = bhat
-	- $\hat{b} = proj_{Col(A)} \vec{b}$
+	- $\hat{b} = A\hat{x}= proj_{Col(A)} \vec{b}$
 
 
 ### Normal Equations
