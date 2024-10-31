@@ -1,11 +1,12 @@
-Given many data points, construct a matrix equation in the form of a linear equation (this matrix equation will be overdetermined).
+### Given
+Given many data points, construct a matrix equation in the form of a linear equation (this matrix equation will be overdetermined). The matrix equation below is $A\vec{x} = \vec{b}$
 $$\begin{bmatrix}
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- & 
+1 & x_0 \\
+1 & x_1 \\
+1 & x_2 \\
+1 & x_3 \\
+1 & x_4 \\
+1 & x_5
 \end{bmatrix}\begin{bmatrix}
 b \\
 m
@@ -17,39 +18,38 @@ y_3 \\
 y_4 \\
 y_5
 \end{bmatrix}$$
+### Goal
+Using [[Best Approximation]], find $\vec{v}$ in subspace $Col\ A$ closest to $\vec{b}$
 
-#q x vs xhat???
-p sure x is in the original equation and xhat is only for the final solution?
+$Col\ A$ is a subspace of $\mathbb{R}^n$, $\vec{b} \in \mathbb{R}^n$
+$\forall \vec{x},\ \vec{a} = A\vec{x}$, i.e. $\vec{a} \in Col\ A$
+$\hat{b} = A\hat{x} = proj_{Col\ A} \vec{b}$
+$\implies$
+$$\displaylines{
+\forall \vec{a}\in Col\ A,\ \vec{a} \not = \hat{b} \quad \quad ||\vec{b} - \hat{b}|| < ||\vec{b} - \vec{a}||\\
+\exists!\ \hat{b} \not \in span(Col\ A) \quad \quad ||\vec{b} - \hat{b}|| < ||\vec{b} - span(Col\ A)||
+}
+$$
 
-Let A be a m x n matrix. A least squares solution to Ax = b is the solution $\hat{x}$ for which 
-$$\forall \vec{x} \in \mathbb{R}^n \quad\quad ||\vec{b} - A\hat{x}|| \leq ||\vec{b} - A \vec{x}||$$
-- minimize the difference b - Axhat
-	- ||b - bhat|| is the minimal distance between the different solutions
-- for any x in Rn, Ax in Col A, but no guaranttee b is in Col A
-- want to find xhat st Axhat in col A is closest to b
-Use principles from [[Best Approximation]]
-![[Pasted image 20241030094647.png]]
-b is closer to Axhat than to Ax for all other x in Col A
-- If b in Col A, then xhat is...
-- Seek $\hat{x}$ so that $A\hat{x}$ is as close to $\vec{b}$ as possible, i.e. $\hat{x}$ should solve Axhat = bhat
-	- $\hat{b} = A\hat{x}= proj_{Col(A)} \vec{b}$
-
-
+In other words, $\hat{b} = A\hat{x} = proj_{col\ a} \vec{b}$ is closest vector in $Col\ A$ to $\vec{b}$
+Note: $\hat{x}$ is a unique vector, a special $\vec{x}$ that minimizes the above equation.
+![[Pasted image 20241030094647.png|400]]
 ### Normal Equations
 The least squares solutions to $A\vec{x} = \vec{b}$ corresponds to the solution to 
 $$A^T A\vec{x} = A^T \vec{b}$$
 - Turns the $A\vec{x} = \vec{b}$ equation from above and transforms it into a square matrix equation
 
 ### Derivation
-##### Method A
-b - bhat perp Col A \implies a_j dot (b - bhat) = 0 \implies a_j (b - Axhat) = 0 \implies a_j^T (b - Axhat) = 0, for all j \implies A^T (b - Axhat) = 0 \implies A^T A\vec{x} = A^T \vec{b}
-##### Method B
-![[Pasted image 20241030095559.png]]
-$(Col A)^{\perp} - Null(A^T)$
-- xhat is the least squares solution, is equiv to b - Axhat is orthogonal to Col A
-- vector v is in Null(A^T) $\iff$ A^T v = 0
-- A^T (b - Ahat) = 0
-### Usage
+![[Pasted image 20241030095559.png|400]]
+- $(Col A)^{\perp} = Null(A^T)$
+- $\hat{x}$ is the Least Squares Solution to $A\vec{x} = \vec{b}$ $\iff b - A\hat{x} \perp Col\ A$
+- $\vec{b} - A\hat{x} \perp Col\ A \implies \vec{b} - A\hat{x} \in (Col\ A)^{\perp}$
+- $\vec{b} - A\hat{x} \in (Col\ A)^{\perp} \implies \vec{b} - A\hat{x} \in Nul\ A^T$
+- $\vec{b} - A\hat{x} \in Nul\ A^T \iff A^T (\vec{b} - A\hat{x}) = 0$
+- $A^T (b - A\hat{x}) = 0$
+- $A^T b - A^T A\hat{x} = 0$
+- $A^T A\hat{x} = A^T \vec{b}$
+##### Normal Equation Usage
 - Use when non-square matrix
 	- Over/Under determined
 - Regression
@@ -64,10 +64,12 @@ $$\hat{x} = (A^T A)^{-1} A^T \vec{b}$$
 Note: $A^T A$ plays the role of the "length squared" of the matrix A
 
 ### Theorem (Least Squares and QR)
-Let m x n matrix A have a QR decomposition. Then for each b in Rm, the equation Ax = b has the unique least squares solution
-$$R\hat{x} = Q^T \vec{b}$$
-$R$ is upper triangular, so the equation above is solved by reverting it back to the system of equations
-
+$$\displaylines{
+A \in \mathbb{R}^{m \times n} = QR\\
+\implies\\
+\text{Least Squares Solution }
+\hat{x} = R^{-1} Q^T \vec{b}
+}$$
 ## Examples
 $$\displaylines{
 A = \begin{bmatrix}
@@ -116,4 +118,20 @@ A^T A \vec{x}= A^T \vec{b}\\
 }$$
 
 See also: [[LeastSquaresHW6_5.pdf]]
+
+
+
+### Hampton Explanation for Least Squares
+Let $A \in \mathbb{R}^{m \times n}$. $\hat{x}$ is the unique, minimizing solution to the equation $A\vec{x} = \vec{b}$ such that
+$$\forall \vec{x} \in \mathbb{R}^n \quad\quad ||\vec{b} - A\hat{x}|| \leq ||\vec{b} - A \vec{x}||$$
+- Essentially, minimize $\vec{b} - A\hat{x}$
+	- $||\vec{b} - \hat{b}||$ is the minimal distance between the different solutions
+- $\forall x \in \mathbb{R}^n,\ A\vec{x} \in Col\ A,\ \vec{b} =^{?} Col\ A$
+- Goal: Find $\hat{x}$ s.t. $A\hat{x} \in Col\ A$ is closest to $\vec{b}$
+- $\hat{x}$ in this context just denotes the special/unique $x$ that minimizes the distances between $\vec{b}$ and $A\hat{x}$
+![[Pasted image 20241030094647.png]]
+b is closer to Axhat than to Ax for all other x in Col A
+- If b in Col A, then xhat is...
+- Seek $\hat{x}$ so that $A\hat{x}$ is as close to $\vec{b}$ as possible, i.e. $\hat{x}$ should solve Axhat = bhat
+	- $\hat{b} = A\hat{x}= proj_{Col(A)} \vec{b}$
 
