@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Least Squares.md",
+                "file": "Diagonalizable.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Least Squares"
+              "title": "Diagonalizable"
             }
           }
         ]
@@ -165,11 +165,13 @@
   },
   "active": "4ee46cf2e549aa58",
   "lastOpenFiles": [
+    "Diagonalization.md",
+    "Master.md",
+    "Diagonalizable.md",
+    "Least Squares.md",
     "Best Approximation.md",
     "Orthogonal.md",
-    "Master.md",
     "Orthogonal Decomposition.md",
-    "Least Squares.md",
     "Pluto/LeastSquaresHW6_5.pdf",
     "Ortho.md",
     "Pluto/LeastSquaresHW6_5 backup 1.jl",
