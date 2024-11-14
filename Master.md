@@ -927,3 +927,10 @@ $$c_i=\frac{\vec{w} \cdot \vec{u}_i}{\vec{u}_i \cdot \vec{u}_i}$$
 ## [[QR Factorization]]
 
 # [[Least Squares]]
+
+
+# Exam 4
+# [[Google Page Rank]]
+# [[Symmetric Matrix]]
+# [[Spectral Decomposition]]
+## [[Orthogonal Diagonalization]]

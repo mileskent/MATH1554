@@ -28,3 +28,4 @@ A\ = [\vec{v_0}\ ,\ ...\ , \vec{v_n}]\begin{bmatrix}
 
 
 # [[Diagonalizable]]
+# [[Orthogonal Diagonalization]]
