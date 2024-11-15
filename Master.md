@@ -934,3 +934,4 @@ $$c_i=\frac{\vec{w} \cdot \vec{u}_i}{\vec{u}_i \cdot \vec{u}_i}$$
 # [[Symmetric Matrix]]
 # [[Spectral Decomposition]]
 ## [[Orthogonal Diagonalization]]
+# [[Quadratic Form]]
