@@ -935,3 +935,4 @@ $$c_i=\frac{\vec{w} \cdot \vec{u}_i}{\vec{u}_i \cdot \vec{u}_i}$$
 # [[Spectral Decomposition]]
 ## [[Orthogonal Diagonalization]]
 # [[Quadratic Form]]
+# [[Constrained Optimization]]
