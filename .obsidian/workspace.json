@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spectral Decomposition.md",
+                "file": "Quadratic Form.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spectral Decomposition"
+              "title": "Quadratic Form"
             }
           },
           {
@@ -176,8 +176,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "d487797700d8603e",
@@ -265,6 +264,8 @@
   },
   "active": "4792d752623ae058",
   "lastOpenFiles": [
+    "Pasted image 20241124225238.png",
+    "Spectral Decomposition.md",
     "Pasted image 20241124220020.png",
     "Pasted image 20241124220018 1.png",
     "Pasted image 20241124220018.png",
@@ -272,7 +273,6 @@
     "Least Squares.md",
     "Gram-Schmidt Process.md",
     "Google Page Rank.md",
-    "Spectral Decomposition.md",
     "Singular Value Decomposition.md",
     "Orthonormal.md",
     "Pasted image 20241120094505.png",

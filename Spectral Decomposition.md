@@ -10,4 +10,3 @@ An n × n symmetric matrix A has the following properties.
 
 ## Spectal Decomp
 ![[Pasted image 20241124220020.png|400]]
-# General
