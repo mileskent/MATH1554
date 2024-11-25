@@ -176,7 +176,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "d487797700d8603e",
@@ -264,8 +265,15 @@
   },
   "active": "4792d752623ae058",
   "lastOpenFiles": [
-    "Singular Value Decomposition.md",
+    "Pasted image 20241124220020.png",
+    "Pasted image 20241124220018 1.png",
+    "Pasted image 20241124220018.png",
+    "Symmetric Matrix.md",
+    "Least Squares.md",
+    "Gram-Schmidt Process.md",
+    "Google Page Rank.md",
     "Spectral Decomposition.md",
+    "Singular Value Decomposition.md",
     "Orthonormal.md",
     "Pasted image 20241120094505.png",
     "Master.md",
@@ -273,11 +281,8 @@
     "Quadratic Form.md",
     "Orthogonal Diagonalization.md",
     "Diagonalization.md",
-    "Symmetric Matrix.md",
-    "Google Page Rank.md",
     "Orthogonal Decomposition.md",
     "Orthogonal Matrix.md",
-    "Least Squares.md",
     "Orthogonal.md",
     "Orthogonal Complement.md"
   ]
