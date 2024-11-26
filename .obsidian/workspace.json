@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spectral Decomposition.md",
+                "file": "Singular Value Decomposition.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spectral Decomposition"
+              "title": "Singular Value Decomposition"
             }
           },
           {
