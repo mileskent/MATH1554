@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Singular Value Decomposition.md",
+                "file": "Symmetric Matrix.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Singular Value Decomposition"
+              "title": "Symmetric Matrix"
             }
           },
           {
@@ -176,7 +176,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "d487797700d8603e",
@@ -264,6 +265,7 @@
   },
   "active": "4792d752623ae058",
   "lastOpenFiles": [
+    "Singular Value Decomposition.md",
     "Symmetric Matrix.md",
     "Spectral Decomposition.md",
     "Quadratic Form.md",
@@ -274,7 +276,6 @@
     "Least Squares.md",
     "Gram-Schmidt Process.md",
     "Google Page Rank.md",
-    "Singular Value Decomposition.md",
     "Orthonormal.md",
     "Pasted image 20241120094505.png",
     "Master.md",
