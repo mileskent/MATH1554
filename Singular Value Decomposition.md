@@ -17,17 +17,17 @@ https://www.youtube.com/watch?v=vSczTbgc8Rc
 $A = U\Sigma V^T$
 $U$ and $V$ are square, guaranteed.
 1. Singular values: $\sqrt{\text{eigenvalues of } A^T A}$
-2. Construct $\Sigma$ using the singular values
+2. Construct $\Sigma$ using the singular values. $\Sigma$ has the same shape as $A$, with a diagonal matrix of the singular values in the top left corner
 3. V = matrix of eigenvectors of $A^T A$
 4. Compute an orthonormal basis for Col A: use $A\vec{v_i} = \sigma_i \vec{u_i}$ for dim $V$
 5. Afterwhich, extend and fill up the remaining orthonormal basis
 	1. Option A: Rawdog it$-$think about it, so to speak
 	2. Option B: [[Gram-Schmidt Process]]
 6. Construct the columns of $U$ with the $\vec{u_i}$ vectors
+7. Note: for U you can also get it via the V process but with $AA^T$
+8. U and V are orthogonal btw
 
 $$
 A = \sum^{r}_{s=1} \sigma_s \vec{u}_s \vec{v}^T_s
 $$
 where $\vec{u}_s$, $\vec{v}_s$ are the $s^{\text{th}}$ columns of $U$ and $V$
-
-Note: you can also say U = matrix of eigenvectors of $AA^T$

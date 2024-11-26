@@ -4,39 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d6404113a96489a9",
+        "id": "9f7ece212e455d8b",
         "type": "tabs",
         "children": [
           {
-            "id": "f16e568f8b68d9b3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Diagonalizable.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Diagonalizable"
-            }
-          },
-          {
-            "id": "f2a89d359bea3f20",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Master.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Master"
-            }
-          },
-          {
-            "id": "4792d752623ae058",
+            "id": "d0f80d0ab6fc264c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,79 +20,8 @@
               "icon": "lucide-file",
               "title": "Singular Value Decomposition"
             }
-          },
-          {
-            "id": "42bc52a9cc0ed164",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Constrained Optimization.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Constrained Optimization"
-            }
-          },
-          {
-            "id": "7030d4a8559d54f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spectral Decomposition.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Spectral Decomposition"
-            }
-          },
-          {
-            "id": "77c8133de6f57d72",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Diagonalization.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Diagonalization"
-            }
-          },
-          {
-            "id": "66410e44be8d7581",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Orthogonal Diagonalization.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Orthogonal Diagonalization"
-            }
-          },
-          {
-            "id": "5aea41b1a36a7ea7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Symmetric Matrix.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Symmetric Matrix"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -263,11 +164,16 @@
       "obsidian-matrix:Obsidian Matrix": false
     }
   },
-  "active": "4792d752623ae058",
+  "active": "d0f80d0ab6fc264c",
   "lastOpenFiles": [
     "Symmetric Matrix.md",
-    "Singular Value Decomposition.md",
+    "Diagonalization.md",
     "Spectral Decomposition.md",
+    "Constrained Optimization.md",
+    "Master.md",
+    "Diagonalizable.md",
+    "Orthogonal.md",
+    "Singular Value Decomposition.md",
     "Quadratic Form.md",
     "Pasted image 20241124225238.png",
     "Pasted image 20241124220020.png",
@@ -278,13 +184,9 @@
     "Google Page Rank.md",
     "Orthonormal.md",
     "Pasted image 20241120094505.png",
-    "Master.md",
-    "Constrained Optimization.md",
     "Orthogonal Diagonalization.md",
-    "Diagonalization.md",
     "Orthogonal Decomposition.md",
     "Orthogonal Matrix.md",
-    "Orthogonal.md",
     "Orthogonal Complement.md"
   ]
 }
