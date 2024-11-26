@@ -1,3 +1,4 @@
+https://www.youtube.com/watch?v=vSczTbgc8Rc
 # Definition
 Matrix A is symmetric if A^T = A
 

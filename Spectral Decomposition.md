@@ -1,3 +1,4 @@
+https://www.youtube.com/watch?v=mhy-ZKSARxI
 # Symmetric
 Recall: If P is an orthogonal n × n matrix, then P −1 = P T , which
 implies A = PDP^T is diagonalizable and symmetric.
