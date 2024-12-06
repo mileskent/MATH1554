@@ -1,0 +1,1 @@
+$\forall \vec{x}\ x^T A x < 0$, then $A$ is [[Negative Definite]]
