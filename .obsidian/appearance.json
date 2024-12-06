@@ -1,7 +1,7 @@
 {
-  "accentColor": "#c16815",
-  "theme": "obsidian",
+  "accentColor": "#d38fe6",
+  "theme": "system",
   "monospaceFontFamily": "UbuntuMono Nerd Font Mono",
   "baseFontSizeAction": true,
-  "baseFontSize": 11
+  "baseFontSize": 12
 }
