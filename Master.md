@@ -405,7 +405,7 @@ onto iff the standard matrix has a pivot in every row
 
 
 The matrix A has columns which span $\mathbb{R}^m$.
-The matrix A has m pivotal columns.
+The matrix A has all pivotal rows.
 
 ## 1-1
 * If there is at most one location in the codomain for every location in the domain
