@@ -6,7 +6,7 @@ https://www.youtube.com/watch?v=vSczTbgc8Rc
 	- Describe difficulty in computing inverse
 	- Chaos: small change in input results in massive change in output
 - Can use SVD to talk about rkA, ColA, RowA, NulA, $(Col\ A)^\perp$, etc.
-	- rkA = rk$\Sigma$
+	- rkA = rk$\Sigma$ 
 		- 
 	- ColA = U columns through dim A
 		- bc $A\vec{v} \propto \vec{u}$
@@ -23,9 +23,10 @@ $U$ and $V$ are square, guaranteed.
 5. Afterwhich, extend and fill up the remaining orthonormal basis
 	1. Option A: Rawdog it$-$think about it, so to speak
 	2. Option B: [[Gram-Schmidt Process]]
+	3. Option C: Use $Nul\ AA^T$
 6. Construct the columns of $U$ with the $\vec{u_i}$ vectors
-7. Note: for U you can also get it via the V process but with $AA^T$
-8. U and V are orthogonal btw
+7. Note: for U you can also get it via the V process but with $AA^T$, for eigenvalue 0, find eigenvector
+8. U and V are orthogonal btw, and they have dimensions of $A^T A$ and $AA^T$
 
 $$
 A = \sum^{r}_{s=1} \sigma_s \vec{u}_s \vec{v}^T_s
