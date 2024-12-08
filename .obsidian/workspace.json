@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Singular Value Decomposition.md",
+                "file": "Quadratic Form.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Singular Value Decomposition"
+              "title": "Quadratic Form"
             }
           }
         ]
@@ -165,8 +165,8 @@
   },
   "active": "77170b756b0a3adb",
   "lastOpenFiles": [
-    "Least Squares.md",
     "Singular Value Decomposition.md",
+    "Least Squares.md",
     "Orthogonal Diagonalization.md",
     "Diagonalization.md",
     "Quadratic Form.md",
