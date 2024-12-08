@@ -26,7 +26,7 @@ $U$ and $V$ are square, guaranteed.
 	3. Option C: Use $Nul\ AA^T$
 6. Construct the columns of $U$ with the $\vec{u_i}$ vectors
 7. Note: for U you can also get it via the V process but with $AA^T$, for eigenvalue 0, find eigenvector
-8. U and V are orthogonal btw, and they have dimensions of $A^T A$ and $AA^T$
+8. V and U are orthogonal btw, and they have dimensions of $A^T A$ and $AA^T$
 
 $$
 A = \sum^{r}_{s=1} \sigma_s \vec{u}_s \vec{v}^T_s
