@@ -2,7 +2,8 @@ $A \in \mathbb{R}^{n \times n} \land A = PDP^{-1} \implies A$ is diagonalizable,
 
 $A$ is diagonalizable $\iff$ $A$ has $n$ linearly independent eigenvectors.
 i.e.
-$$\displaylines{
+$$
+\displaylines{
 A = PDP^{-1}\\ \iff \\ A = [\vec{v_1}, ..., \vec{v_n}] 
 \begin{bmatrix}
 \lambda_1 &  &  \\
@@ -50,7 +51,8 @@ $$
 There is only one free columns here. Therefore, the dimension of the Nullspace is one, not two, which means the matrix is not diagonalizable.
 
 #### Basis of Eigenvectors
-$$\displaylines{
+$$
+\displaylines{
 \text{Express the vector $\vec{x}_0 =$}
 \begin{bmatrix}
 4 \\
@@ -91,11 +93,13 @@ A^k = PD^k P^{-1} = [\vec{v_1}\ \vec{v_2}]
 \end{bmatrix}  
 [\vec{v_1}\ \vec{v_2}]^{-1}\\
 [A^k\ \vec{x}_0]_{\mathcal{B}} =\ ?
-}$$
+}
+$$
 #todo
 
 #### Misc.
-$$\displaylines{
+$$
+\displaylines{
 \text{Let d(x) be "x is diagonalizable"}\\
 \text{Let i(x) be "x is invertible"}\\
 d(A) \land i(A) \iff d(A^{-1})\land i(A^{-1})
