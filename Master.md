@@ -39,7 +39,9 @@ $$
 0 & 2 & -8 & 8 \\
 0 & 0 & 30 & -30
 \end{bmatrix}
-$$$$\begin{bmatrix}
+$$
+$$
+\begin{bmatrix}
 1 & -2 & 1 & 0 \\
 0 & 1 & -4 & 4 \\
 0 & 0 & 1 & -1
@@ -53,7 +55,8 @@ $$$$\begin{bmatrix}
 1 & 0 & 0 & 1 \\
 0 & 1 & 0 & 0 \\
 0 & 0 & 1 & -1
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 
 A linear system is considered ***consistent*** if it has $>=1$ solution(s)
 If two matrices are ***row equivalent*** they have the same solution set, meaning that one can be transformed into the other
@@ -99,16 +102,20 @@ is a **linear combination** of the $v$ vectors, with weights of the $c$'s
 
 ## Span
 * The set of all linear combinations of the $v$'s in called the **span** of the $v$'s
-* e.g. $$SPAN(\begin{bmatrix}
+* e.g. 
+$$
+SPAN(\begin{bmatrix}
 1 \\
 0
 \end{bmatrix}, \begin{bmatrix}
 0 \\
 1
-\end{bmatrix}) = \mathbb{R}^2$$
+\end{bmatrix}) = \mathbb{R}^2
+$$
 * any 2 vectors in $\mathbb{R}^2$ that are not scalar multiplies of each other span $\mathbb{R}^2$
 Q: Is $\vec{b} \in SPAN(\vec{a}_1, \vec{a}_2)$
-$$\vec{b} = \begin{bmatrix}
+$$
+\vec{b} = \begin{bmatrix}
 7 \\
 4 \\
 3
@@ -120,10 +127,12 @@ $$\vec{b} = \begin{bmatrix}
 2 \\
 5 \\
 6
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 Matrix below in form of system of equations where X and Y scale columns 0 and 1, and column 2 are coefficients on the right hand side of the equation. By reducing this matrix to RREF, we can systematically reveal the values of X and Y
 
-$$\begin{bmatrix}
+$$
+\begin{bmatrix}
 1 &  2&  7\\
 -2 & 5&  4\\
 -5 &  6&  3
@@ -166,7 +175,8 @@ $\vec{A} \vec{x} = \vec{b}$ exists
 
 
 ![[Pasted image 20240826095038.png]]
-$$\begin{bmatrix}
+$$
+\begin{bmatrix}
 2 & 3 & 7 \\
 1 & -1 & 5
 \end{bmatrix}
@@ -192,16 +202,19 @@ You can parameterize the free variables and then write the solution as a vector 
 The solution is $\vec{x}$ which is
 $x_1 = 2x_3, x_2 = -x_3, x_3=x_3$
 Let $x_3 = t$
-$$\vec{x} = \begin{bmatrix}
+$$
+\vec{x} = \begin{bmatrix}
 2 \\
 -1 \\
 1
-\end{bmatrix} t$$
+\end{bmatrix} t
+$$
 
 ## Nonhomogenous System
 
 Because right side of augmented is nonzero:
-$$\begin{bmatrix}
+$$
+\begin{bmatrix}
 1 & 3 & 1 & 9 \\
 2 & -1 & -5 & 11 \\
 0 & 1 & -2 & 6
@@ -209,9 +222,11 @@ $$\begin{bmatrix}
 1 & 0 & -2 & 6 \\
 0 & 1 & 1 & 1 \\
 0 & 0 & 0 & 0
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 Let $x_3 = t$
-$$\vec{x} = \begin{bmatrix}
+$$
+\vec{x} = \begin{bmatrix}
 x_1 \\
 x_2 \\
 x_3
@@ -259,7 +274,8 @@ Linear transformation $T: \mathbb{R}^n \rightarrow \mathbb{R}^m, T(\vec{v}) = A 
 * When the domain and codomain are both $\mathbb{R}$, you can represent them as a Cartesian Graph in $\mathbb{R}^2$, as in *a mapping of* $\mathbb{R} \rightarrow \mathbb{R}$
 	* If y is the codomain and x is the domain, the range is the range, the domain is all the images of f(x)
 ## The interpretation of matrix multiplication as a linear transformation
-$$A = \begin{bmatrix}
+$$
+A = \begin{bmatrix}
 1 & 1 \\
 0 & 1 \\
 1 & 1
@@ -270,10 +286,14 @@ $$A = \begin{bmatrix}
 7 \\
 5 \\
 7
-\end{bmatrix}$$
-$$T: \mathbb{R}^2 \rightarrow \mathbb{R}^3$$
+\end{bmatrix}
+$$
+$$
+T: \mathbb{R}^2 \rightarrow \mathbb{R}^3
+$$
 Compute $T(\vec{u})$
-$$A \vec{u} = \begin{bmatrix}
+$$
+A \vec{u} = \begin{bmatrix}
 1 & 1 \\
 0 & 1 \\
 1 & 1
@@ -284,10 +304,14 @@ $$A \vec{u} = \begin{bmatrix}
 7 \\
 4 \\
 7
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 Calculate $\vec{v} \in \mathbb{R}^2$ so that $T(\vec{v}) = \vec{b}$
-$$A\vec{v} = \vec{b}$$
-$$\begin{bmatrix}
+$$
+A\vec{v} = \vec{b}
+$$
+$$
+\begin{bmatrix}
 1 & 1 & 7\\
 0 & 1 & 5\\
 1 & 1 & 7
@@ -312,7 +336,8 @@ $$\begin{bmatrix}
 0 & 1 & 5\\
 \end{bmatrix}
 $$
-$$\vec{v} = \begin{bmatrix}
+$$
+\vec{v} = \begin{bmatrix}
 2 \\
 5
 \end{bmatrix}
@@ -326,17 +351,21 @@ Give a $\vec{c}$ that is not in the span of the columns of $A$
 (Same question for all)
 
 Range of $T$ is a bunch of images of the following form:
-$$A \vec{v} = \begin{bmatrix}
+$$
+A \vec{v} = \begin{bmatrix}
 v_1 + v_2 \\
 v_2 \\
 v_1 + v_2
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 For $\vec{c}$ to not be in the range of $T$, it cannot be in the above form, e.g. it can be
-$$\begin{bmatrix}
+$$
+\begin{bmatrix}
 1 \\
 2 \\
 3
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 
 ## Linear
 A function $T: \mathbb{R}^n \rightarrow m$ is linear if 
@@ -358,7 +387,8 @@ Theorem
 > $A = [T(\vec{e_1}), T(\vec{e_2}), ... T(\vec{e_n})]$
 
 ## Two and three dimensional transformations in more detail.
-$$T(\vec{e_1}) = \begin{bmatrix}
+$$
+T(\vec{e_1}) = \begin{bmatrix}
 5 \\
  -7\\
 2
@@ -366,19 +396,23 @@ $$T(\vec{e_1}) = \begin{bmatrix}
 -3 \\
  -8\\
 0
-\end{bmatrix}$$
-$$A = \begin{bmatrix}
+\end{bmatrix}
+$$
+$$
+A = \begin{bmatrix}
 T(\vec{e_1}) & T(\vec{e_2}) 
 \end{bmatrix} = \begin{bmatrix}
 5 & -3 \\
 -7 &  -8\\
 2 & 0
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 
 Find standard matrix A for T(x) = 3$\vec{x}$ for x in $\mathbb{R}^2$
 $A \in \mathbb{R}^2$
 
-$$A = \begin{bmatrix}
+$$
+A = \begin{bmatrix}
 T(\vec{e_1}) & T(\vec{e_2}) 
 \end{bmatrix} = \begin{bmatrix}
 \begin{bmatrix}
@@ -391,7 +425,8 @@ T(\vec{e_1}) & T(\vec{e_2})
 \end{bmatrix} = \begin{bmatrix}
 3 & 0 \\
 0 & 3
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 
 ## Onto and one-to-one transformations
 TLDR: 
@@ -431,14 +466,16 @@ Identity matrix is a square matrix full of zeroes except for the diagonal, which
 Sums: same dimensions
 Matrix multiplication: $r_1 * (c_1 \times r_2) * c_2 \rightarrow r_1 \times c_2$, $AB \neq BA$, $AB = AC \not \implies B = C$, $AB = 0 \not \implies A = 0 \lor B = 0$, $AB = [Ab_1\ Ab_2]$
 # Transpose of a matrix
-$$ A=\begin{bmatrix}
+$$ 
+A=\begin{bmatrix}
 a & b \\
 c & d \\
 e & f
 \end{bmatrix}, A^T = \begin{bmatrix}
 a & b & c \\
 d & e & f
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 ### Transpose Properties
 $(A^T)^T = A$
 $(A + B)^T + A^T + B^T$
@@ -468,12 +505,14 @@ $(A^{-1})^{-1} = A$
 $(AB)^{-1} = B^{-1} A^{-1}$
 $(A^T)^{-1} = (A^{-1})^T$
 #### $2 \times 2$ Inverse Shortcut
-$$A = \begin{bmatrix}
+$$
+A = \begin{bmatrix}
 a & b \\
 c & d
 \end{bmatrix}
 $$
-$$\begin{bmatrix}
+$$
+\begin{bmatrix}
 a & b \\
 c & d
 \end{bmatrix}^{-1} = \frac{1}{det(A)}
@@ -623,7 +662,10 @@ If a matrix A has n columns, then
 > 5. Null A = {0}
 # Determinant
 Imagine the area of parallelogram created by the basis of a standard vector space, like $\mathbb{R}^2$. Now apply a linear transformation $A$ to that vector space. The new area of the new parallelogram has been scaled by a factor of the determinant.
-$S$ is the parallelopiped. $$area(T(S)) = |det(A)| \cdot area(S)$$
+$S$ is the parallelopiped. 
+$$
+area(T(S)) = |det(A)| \cdot area(S)
+$$
 You can also just think of it as the area of the parallelogram spanned by the columns of a matrix
 R^3 and beyond -> parallelopiped and volume
 #star
@@ -649,12 +691,14 @@ Exactly the same for columns
 ## Cofactor expansion
 What the diagonal 3x3 is shorthand for
 Cofactor of an n x n matrix A is $C_{ij} = (-1)^{i+j} det A_{ij}$
-$$\begin{bmatrix}
+$$
+\begin{bmatrix}
 + & - & + & ... \\
 - & + & - & ... \\
 + & - & + & ... \\
 ... & ... & ... & ...
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 det A = $a_{1j}C_{1j} + ... + a_{nj} C_{nj}$
 For +/- use pattern of current matrix in Q, not the og
 
@@ -663,7 +707,9 @@ For +/- use pattern of current matrix in Q, not the og
 Given
 1. A is square
 2. $A\vec{v}$ defined, e.g. if $A \in \mathbb{R}^{n\times n}$ then $\vec{v} \in \mathbb{R}^n$
-$$A\vec{v} = \lambda\vec{v}$$
+$$
+A\vec{v} = \lambda\vec{v}
+$$
 1. $\vec{v}$ is an **eigenvector** for $A$
 2. $\lambda$ is the corresponding **eigenvalue** ($\lambda\in \mathbb{C}$)
 An eigenvector is a vector solution $\vec{v}$ to the above equation, such that the linear transformation of $A$ has the same result as scaling the vector by $\lambda$.
@@ -745,10 +791,13 @@ Fixed point, I/O the same
 
 
 Ex:
-Determine the steady state vector for $$P = \begin{bmatrix}
+Determine the steady state vector for 
+$$
+P = \begin{bmatrix}
 .8 & .3 \\
 .2 & .7
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 Goal: solve $P\vec{q} = \vec{q}$
 $(P-I)\vec{q} = \vec{q}$
 $$
@@ -767,15 +816,21 @@ $$
 \end{bmatrix}
 }
 $$
-$$\therefore \vec{q} = t\begin{bmatrix}
+$$
+\therefore \vec{q} = t\begin{bmatrix}
 \frac{3}{2} \\
 1
-\end{bmatrix}$$
-$$\frac{3}{2}t + t = 1$$
-$$\therefore t = \begin{bmatrix}
+\end{bmatrix}
+$$
+$$
+\frac{3}{2}t + t = 1
+$$
+$$
+\therefore t = \begin{bmatrix}
 \frac{3}{5} \\
 \frac{2}{5}
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 Related to eigenvectors. $\vec{q}$ is defined as $lim_{k\rightarrow \infty} \left(P^k \vec{x_0}\right) = \vec{q}$, also $P\vec{q} = \vec{q}$
 When you reapply a linear transformation approaching infinity times, all the points in the subspace will approach the span of
 1. If the transformation is regular, a single eigenvector
@@ -784,7 +839,9 @@ When you reapply a linear transformation approaching infinity times, all the poi
 
 Theorem
 > as k -> $\infty$
-> $$\vec{x}_{k+1} = P \vec{x}_k ; k = 0, 1, 2, . . .$$
+> $$
+> \vec{x}_{k+1} = P \vec{x}_k ; k = 0, 1, 2, . . .
+> $$
 > 
 > If $P$ is a regular stochastic matrix, then $P$ has a unique steady-state vector $\vec{q}$, and $\vec{x_{k+1}} = P\vec{x_k}$ converges to $\vec{q}$ as $k \rightarrow \infty$; $(P^k \vec{x_0} \longrightarrow_{k\rightarrow \infty} \vec{q})$ where $P\vec{q} = \vec{q}$
 
@@ -830,16 +887,19 @@ Theorem
 - $p(\lambda) = (\lambda + 2)(\lambda - (4+i))(\lambda - (-4-i))(\lambda - i) (\lambda-(4-i))(\lambda - (-4 + i))(\lambda + i)$ 
 #### Example
 The matrix that rotates vectors by $\frac{\pi}{4}$ radians about the origin and then scales vectors by $\sqrt{2}$ is:
-$$\begin{bmatrix}
+$$
+\begin{bmatrix}
 1 & -1 \\
 1 & 1
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 What are the eigenvalues of $A$? Find an eigenvector for each eigenvalue
 
 $det(A - \lambda I) = (1 - \lambda)^2 = \lambda^2 - 2\lambda +2$
 $\lambda = \frac{2 \pm \sqrt{4 - 8}}{2} = \frac{2 \pm 2i}{2} = 1 \pm i$
 $\lambda^{+}$:
-$$\displaylines{
+$$
+\displaylines{
 A - \lambda^{+} I\\
 \begin{bmatrix}
 1-(1+i) & -1 \\
@@ -867,7 +927,8 @@ i \\
 $$
 
 $\lambda^{-}$:
-$$\displaylines{
+$$
+\displaylines{
 """"""\rightarrow \vec{v_{-}} = \begin{bmatrix}
 -i \\
 1
@@ -911,14 +972,20 @@ A set of vectors are an **orthogonal set** of vectors if every pair in the set i
 
 **Linear Independence for Orthogonal Sets:**
 If there is an orthogonal set of vectors $O$, then
-$$||c_1 \cdot \vec{u}_1 + \cdots  + c_n \cdot \vec{u}_n||^2 = c_1^2 \cdot ||\vec{u}_1||^2 + \cdots + c_n^2 \cdot ||\vec{u}_n||^2$$
+$$
+||c_1 \cdot \vec{u}_1 + \cdots  + c_n \cdot \vec{u}_n||^2 = c_1^2 \cdot ||\vec{u}_1||^2 + \cdots + c_n^2 \cdot ||\vec{u}_n||^2
+$$
 $\vec{0} \not \in O \implies O$ lin. indep.
 
 **Expansion in Orthogonal Basis**
 If $O$ is the basis for subspace $W$ in $\mathbb{R}^n$ and $O$ is an orthogonal basis,
 then for any vector $\vec{w} \in W$
-$$\vec{w} = c_1 \vec{u}_1 + \cdots + c_n \vec{u}_n$$
-$$c_i=\frac{\vec{w} \cdot \vec{u}_i}{\vec{u}_i \cdot \vec{u}_i}$$
+$$
+\vec{w} = c_1 \vec{u}_1 + \cdots + c_n \vec{u}_n
+$$
+$$
+c_i=\frac{\vec{w} \cdot \vec{u}_i}{\vec{u}_i \cdot \vec{u}_i}
+$$
 
 ## [[Orthogonal Projection]]
 ## [[Orthogonal Decomposition]]

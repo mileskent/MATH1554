@@ -1,5 +1,7 @@
 For any $m \times n$ matrix $A$, with linearly independent columns:
-$$A = QR$$
+$$
+A = QR
+$$
 Q is
 - m x n
 - its columns are an orthonormal basis for Col A

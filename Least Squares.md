@@ -1,7 +1,8 @@
 ### Given
 Given many data points, construct a matrix equation in the form of a linear equation (this matrix equation will be overdetermined). The matrix equation below is $A\vec{x} = \vec{b}$
 This equation is linear but it doesn't have to be, just adjust accordingly to represent the equations as a matrix equation.
-$$\begin{bmatrix}
+$$
+\begin{bmatrix}
 1 & x_0 \\
 1 & x_1 \\
 1 & x_2 \\
@@ -18,7 +19,8 @@ y_2 \\
 y_3 \\
 y_4 \\
 y_5
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 ### Goal
 Using [[Best Approximation]], find a vector in subspace $Col\ A$ closest to $\vec{b}$
 
@@ -27,7 +29,8 @@ $\forall \vec{x},\ \vec{a} = A\vec{x}$, i.e. $\vec{a} \in Col\ A$
 $\hat{b} = A\hat{x} = proj_{Col\ A} \vec{b}$
 Note: Can only use [[Orthogonal Decomposition]] for $\hat{b}$ when the columns of A form an orthogonal basis, by definition
 $\implies$
-$$\displaylines{
+$$
+\displaylines{
 \forall \vec{a}\in Col\ A,\ \vec{a} \not = \hat{b} \quad \quad ||\vec{b} - \hat{b}|| < ||\vec{b} - \vec{a}||\\
 \forall A\vec{x} \in Col\ A,\ A\vec{x} \not = A\hat{x} \quad \quad ||\vec{b} - A\hat{x} || < ||\vec{b} - A\vec{x}||\\
 }
@@ -40,7 +43,9 @@ Note: If the columns of $A$ are orthogonal, then you can just use the scalar pro
 ![[Pasted image 20241030094647.png|400]]
 # Normal Equations
 The least squares solutions to $A\vec{x} = \vec{b}$ corresponds to the solution to 
-$$A^T A\vec{x} = A^T \vec{b}$$
+$$
+A^T A\vec{x} = A^T \vec{b}
+$$
 - Turns the $A\vec{x} = \vec{b}$ equation from above and transforms it into a square matrix equation
 
 ### Derivation
@@ -64,20 +69,25 @@ If A is m x n
 - Cols of A are linearly independent
 - The matrix A^T A is invertible
 If the above hold, the **unique** least square solution is
-$$\hat{x} = (A^T A)^{-1} A^T \vec{b}$$
+$$
+\hat{x} = (A^T A)^{-1} A^T \vec{b}
+$$
 If the above conditions are not true, there may be infinitely many solutions, or some other nonunique amount of solutions, in which case you should consider $[A^T A\ A^T \vec{b}]$ instead.
 
 Note: $A^T A$ plays the role of the "length squared" of the matrix A
 
 ### Theorem (Least Squares and QR)
-$$\displaylines{
+$$
+\displaylines{
 A \in \mathbb{R}^{m \times n} = QR\\
 \implies\\
 \text{Least Squares Solution }
 \hat{x} = R^{-1} Q^T \vec{b}
-}$$
+}
+$$
 ## Examples
-$$\displaylines{
+$$
+\displaylines{
 A = \begin{bmatrix}
 4 & 0 \\
  0&2  \\
@@ -121,7 +131,8 @@ A^T A \vec{x}= A^T \vec{b}\\
 1 \\
 2
 \end{bmatrix}
-}$$
+}
+$$
 
 See also: [[LeastSquaresHW6_5.pdf]]
 
@@ -129,7 +140,9 @@ See also: [[LeastSquaresHW6_5.pdf]]
 
 ### Hampton Explanation for Least Squares
 Let $A \in \mathbb{R}^{m \times n}$. $\hat{x}$ is the unique, minimizing solution to the equation $A\vec{x} = \vec{b}$ such that
-$$\forall \vec{x} \in \mathbb{R}^n \quad\quad ||\vec{b} - A\hat{x}|| \leq ||\vec{b} - A \vec{x}||$$
+$$
+\forall \vec{x} \in \mathbb{R}^n \quad\quad ||\vec{b} - A\hat{x}|| \leq ||\vec{b} - A \vec{x}||
+$$
 - Essentially, minimize $\vec{b} - A\hat{x}$
 	- $||\vec{b} - \hat{b}||$ is the minimal distance between the different solutions
 - $\forall x \in \mathbb{R}^n,\ A\vec{x} \in Col\ A,\ \vec{b} =^{?} Col\ A$

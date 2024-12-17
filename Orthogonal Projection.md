@@ -1,4 +1,5 @@
-$$\displaylines{
+$$
+\displaylines{
 \text{proj}_{\vec{u}} \vec{v} = 
 
 \left( \vec{v} \cdot \hat{u} \right)\hat{u}

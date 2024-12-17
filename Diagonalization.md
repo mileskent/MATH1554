@@ -10,7 +10,8 @@ $A\vec{v_0} = \lambda_0 \vec{v_0}$
 ...
 $A\vec{v_n} = \lambda_n \vec{v_n}$
 
-$$\displaylines{
+$$
+\displaylines{
 A\ [\vec{v_0}\ ,\ ...\ ,\ \vec{v_n}] = [\lambda_0 \vec{v_0}\ ,\ ...\ ,\ \lambda_n \vec{v_n}]\\
 
 A\ [\vec{v_0}\ ,\ ...\ ,\ \vec{v_n}]= [\vec{v_0}\ ,\ ...\ , \vec{v_n}]\begin{bmatrix}
@@ -24,7 +25,8 @@ A\ = [\vec{v_0}\ ,\ ...\ , \vec{v_n}]\begin{bmatrix}
  & ... &  \\
  &  & \lambda_n
 \end{bmatrix} [\vec{v_0}\ ,\ ...\ ,\ \vec{v_n}]^{-1}
-}$$
+}
+$$
 
 
 # [[Diagonalizable]]
